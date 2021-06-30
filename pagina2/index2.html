@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" type="text/javascript"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">  
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <title>TravelBooking</title>
+</head>
+<body onload="caricaOpzioniAndataRitorno(), nascondiRitorno()">
+    <div class="boxNavBar">
+        <div class="navTitle">
+            <h1>Scegli il tuo viaggio</h1>
+        </div>
+        <div class="navIndietro">
+            <a href="../index.html"><span class="spanHome">Home</span></a>
+        </div>
+    </div>
+    <div class="background">
+        <div class="boxPage">
+            <div class="navAR">
+                <span id="spanAndata">Andata</span>
+                <span id="spanRitorno">Ritorno</span>
+            </div>
+            <div id='boxContainerAndata'>
+                <div id='scelteContainer'>
+                </div>
+                <div id='scelteContainerBagaglio'>
+                    <p class="tariffaTitle">TARIFFA DI VIAGGIO</p>
+                    <div id="boxSpanTariffa">
+                        <span>Scegli una tariffa di viaggio</span>
+                    </div>
+                    <div class="group">
+                        <label>
+                            <input type="radio" class="optionInput radio" id="standard" name="tariffa" value="Standard"> 
+                            Standard
+                        </label>
+                        <label>
+                            <input type="radio" class="optionInput radio" id="plus" name="tariffa" value="Plus">
+                            Plus
+                        </label>
+                    </div>
+                    <div class="infoTariffe">
+                        <p id="Tariffe">Info tariffe</p>
+                        <div id="boxInfoTariffe">
+                            <div>
+                                <p>TARIFFA STANDARD</p>
+                                <br>
+                                <ul>
+                                    <li class="ciao">- 1 Bagaglio a mano <br>(45cm x 36cm x 20cm)</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p>TARIFFA PLUS</p>
+                                <br>
+                                <ul>
+                                    <li class="ciao">- Supplemento +40€</li>
+                                    <li class="ciao">- 1 Bagaglio a mano<br>(45cm x 36cm x 20cm)</li>
+                                    <li class="ciao">- 1 Bagaglio in stiva<br>( Max 23kg )</li>
+                                    <li class="ciao">- Speedy boarding </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id='boxContainerRitorno'>
+                <div id='scelteContainerRitorno'>
+                </div>
+                <div id='scelteContainerBagaglioR'>
+                    <p class="tariffaTitle">TARIFFA DI VIAGGIO</p>
+                    <div id="boxSpanTariffaR">
+                        <span>Scegli una tariffa di viaggio</span>
+                    </div>
+                    <div class="group">
+                        <label>
+                            <input type="radio" class="radioR" id="standardR" name="tariffaR" value="Standard"> 
+                            Standard
+                        </label>
+                        <label>
+                            <input type="radio" class="radioR" id="plusR" name="tariffaR" value="Plus">
+                            Plus
+                        </label>
+                    </div>
+                    <div class="infoTariffe">
+                        <p id="TariffeR">Info tariffe</p>
+                        <div id="boxInfoTariffeR">
+                            <div>
+                                <p>TARIFFA STANDARD</p>
+                                <br>
+                                <ul>
+                                    <li class="ciao">- 1 Bagaglio a mano<br>(45cm x 36cm x 20cm)</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p>TARIFFA PLUS</p>
+                                <br>
+                                <ul>
+                                    <li class="ciao">- Supplemento +40€</li>
+                                    <li class="ciao">- 1 Bagaglio a mano<br>(45cm x 36cm x 20cm)</li>
+                                    <li class="ciao">- 1 Bagaglio in stiva<br>(Max 23kg)</li>
+                                    <li class="ciao">- Speedy boarding </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="bottoneAvanti" id="btnAvanti">Avanti</span>
+    </div>
+    <script src="main2.js"></script>
+</body>
+</html>

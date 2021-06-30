@@ -1,0 +1,425 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+}
+
+:root{
+    --ombra: 0px 0px 10px 0px rgba(0,0,0,0.10);
+    --white: white;
+    --lightblue: lightskyblue;
+    --orange: darkorange; 
+    --blue: rgb(43, 196, 223);
+    }
+
+p, label, span{
+    font-family: 'Inter', sans-serif;
+    font-weight: thin;
+}
+
+/* Background */
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image:url(/img/BackTravel.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+
+.boxNavBar{
+    display: flex;
+    position: relative;
+    top: 0;
+    height: auto;
+    width: 100%;
+    background-color:darkorange;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: thin;
+}
+
+.boxPage{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+/* Background form */
+
+.formBoxBack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 295px;
+    width: auto;
+    background-color: var(--lightblue);
+    margin-top: 50px;
+    margin-bottom: 10px;
+    
+}
+
+.boxForm {
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    min-width: 280px;
+    width: 25vw;
+    height: auto;
+    background-color:rgb(252, 249, 240);
+    box-shadow: var(--ombra);
+    justify-content: left;
+}
+
+/* Città */
+
+.boxCittàSelect {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    gap: 2px;
+}
+
+/* Errori */
+
+#errorCittà {
+    display: none;
+    color: red;
+}
+
+#errorCittà.active{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+}
+
+#errorData{
+    display: none;
+    color: red;
+}
+
+#errorData.active{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+}
+
+/* Passeggeri */
+
+.backBoxPasseggeri{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 5px;
+}
+
+.boxPasseggeri{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+}
+
+/* Box data partenza */
+
+.backBoxDatePicker{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+}
+
+.boxTitlePartenza{
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendarioPartenza {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.giornoP{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 5px;
+}
+
+.orarioP{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.labelSoloandata{
+    margin: 5px;
+}
+
+
+.BoxSoloandataFleg {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Box data ritorno */
+
+#boxDataOraRitorno{
+    display: flex;
+    flex-direction: column;
+}
+
+.backBoxDatePicker{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+.backSoloDataOra{
+    display: flex;
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+}
+
+.calendarioRitorno {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.giornoR{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    padding: 5px;
+    gap: 0.5em;
+}
+
+.orarioR{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.labelTitleRitorno{
+    margin: 5px;
+}
+
+.BoxTitleRitorno {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* style alle select */
+
+#citiesP , #citiesD, #annoP, #annoR, #meseP, #meseR, #giornoP, #giornoR, #oraP, #oraR {
+    box-shadow: var(--ombra);
+    padding: 0.5em 2em 0.5em 0.5em;
+    background-color: var(--blue);
+    color: white;
+    border: 0;
+}
+
+#adolescenti, #adulti, #neonati {
+    display: flex;
+    box-shadow: var(--ombra);
+    background-color: var(--blue);
+    color: white;
+    border: 0;
+    height: 2.5em;
+    padding-left: 5px;
+    padding-right: 7px;
+}
+
+.custom-select {
+    position: relative;
+}
+
+.custom-arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    background-color: darkorange;
+    height: 100%;
+    width: 2.5rem;
+    pointer-events: none;
+    color: white;
+    padding: 1em;
+
+}
+
+.custom-arrow::before{
+    --size: 0.4em;
+
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.custom-arrow::before {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid rgba(255, 255, 255, 0.5);
+
+    top:50%;
+}
+
+/* custom arrow Passeggeri */
+
+.custom-arrowP {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    height: 100%;
+    width: 2.5rem;
+    pointer-events: none;
+    color: white;
+    padding: 1em;
+    background-color: darkorange;
+}
+
+.custom-arrowP::before,
+.custom-arrowP::after {
+    --size: 0.4em;
+
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.custom-arrowP::before {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid rgba(255, 255, 255, 0.5);
+
+    top:65%;
+}
+
+.custom-arrowP::after {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-bottom: var(--size) solid rgba(255, 255, 255, 0.5);
+
+    top:40%;
+}
+
+
+/* Bottone cerca */
+
+.invioDati{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#invioDatiTesto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: auto;
+    background-color: var(--blue);
+    border: 3px solid var(--orange);
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 15px;
+    padding:8px;
+    cursor: pointer;
+}
+
+#invioDatiTesto:hover{
+    background-color: rgb(39, 166, 189);
+}
+
+#annoP, #meseP, #giornoP{
+    height: 100%;
+    width: auto;
+}
+
+@media not all and (min-resolution:.001dpcm) { 
+    #citiesP , #citiesD {
+        box-shadow: var(--ombra);
+        padding: 25px;
+        background-color: var(--blue);
+        color: white;
+        border: 0;
+        height: 30px;
+        width: 190px;
+    }
+
+    #annoP, #annoR, #meseP, #meseR, #giornoP, #giornoR, #oraP, #oraR{
+        height: 30px;
+        width: 100px;
+    }
+
+    .custom-select{
+        margin: 5px;
+    }
+
+}

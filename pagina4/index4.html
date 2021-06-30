@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style4.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" type="text/javascript"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet"> 
+    <title>TravelBooking</title>
+</head>
+<body>
+    <div class="boxNavBar">
+        <div class="navTitle">
+            <h1>Pagamento</h1>
+        </div>
+        <div class="navIndietro">
+            <a href="../index.html"><span class="spanHome">Home</span></a>
+        </div>
+    </div>
+    <div class="background">
+        <div class="boxPagamento">
+            <div class="boxTitlePagamento" id="container">
+                <p class="metodoTitle">SELEZIONA UN METODO DI PAGAMENTO</p>
+            </div>
+            <div class="group">
+                <label>
+                    <input type="radio" class="optionInput radio" id="radioCredito" name="metodo" value="CartaDiCredito"> 
+                    Carta di credito
+                </label>
+                <label>
+                    <input type="radio" class="optionInput radio" id="radioPaypal" name="metodo" value="PayPal">
+                    PayPal
+                </label>
+            </div>
+            <div class="payPal" id="paypalID">
+                <div class="boxPaypal">
+                    <form name="form1" onsubmit="return validateEmail(document.form1.email)" action="../pagina5/index5.html">
+                        <div class="boxMail">
+                            <label for="email">Indirizzo Mail Paypal:</label>
+                            <input type="email" name="email" value="" id="mail" placeholder="Mail@example.it" maxlength="30" required>
+                        </div>
+                        <div class="boxPsw">
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" value="" id="psw" placeholder="Password" maxlength="25" required>
+                        </div>
+                        <div class="boxSub">
+                            <button type="submit" class="btnPaypal">
+                            <span class="btnPaypalSpan">Paga</span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="creditCard" id="creditCardID">
+                <div class="boxInfoCard">
+                    <form name="form2" onsubmit="return validateCreditCard(document.form2.number, document.form2.numberCvv, document.form2.numberScadenza)" action="../pagina5/index5.html">
+                        <div class="boxNumberCard">
+                            <label for="number">Numero Carta:</label>
+                            <input type="text" name="number" value="" id="number" minlength="16"  maxlength="16" placeholder="xxxxxxxxxxxxxxxx" required>
+                            <div id="errorNumero">
+                                <span class="errore">Numero carta di valido</span>
+                            </div>
+                        </div>
+                        <div class="boxCvvCard">
+                            <label for="numberCvv">Numero Cvv:</label>
+                            <input type="text" name="numberCvv" value="" id="numberCvv" minlength="3" maxlength="3" placeholder="xxx"required>
+                            <div id="errorCvv">
+                                <span class="errore">Numero Cvv non valido</span>
+                            </div>
+                        </div>
+                        <div class="boxScadenzaCard">
+                            <label for="numberScadenza">Scadenza:</label>
+                            <input type="text" name="numberScadenza" value="" id="numberScadenza" minlength="7" maxlength="7" placeholder="yyyy/mm" required>
+                            <div id="errorScadenza">
+                                <span class="errore">Scadenza carta non valida</span>
+                            </div>
+                        </div>
+                        <div class="boxSub">
+                            <button type="submit" class="btnPaypal">
+                            <span class="btnCreditSpan">Paga</span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main4.js"></script>
+</body>
+</html>

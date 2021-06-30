@@ -1,0 +1,963 @@
+{
+     "partenza" : [
+         {
+             "città" : "Milano Malpensa",
+             "destinazione" : [
+                 {
+                     "città" : "Roma Fiumicino",
+                     "prezzo" : [
+                         {
+                             "età" : "maggiorenne",
+                             "prezzo" : "50"
+                         },
+                         {
+                            "età" : "bambino",
+                            "prezzo" : "25"
+                        },
+                        {
+                            "età" : "neonato",
+                            "prezzo" : "10"
+                        }
+                     ],
+                     "orario" : [
+                         {
+                             "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                             "orariPartenze" : ["10.00", "12.00", "14.00", "16.00"]
+                         },
+                         {
+                            "giorno" : ["martedì", "giovedì", "sabato"],
+                            "orariPartenze" : ["9.00", "13.00", "18.00"]
+                        }
+                     ]
+                 },
+                 {
+                    "città" : "Olbia Costa Smeralda",
+                    "prezzo" : [
+                        {
+                            "età" : "maggiorenne",
+                            "prezzo" : "50"
+                        },
+                        {
+                           "età" : "bambino",
+                           "prezzo" : "25"
+                       },
+                       {
+                           "età" : "neonato",
+                           "prezzo" : "10"
+                       }
+                    ],
+                    "orario" : [
+                        {
+                            "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                            "orariPartenze" : ["11.00", "13.00", "15.00", "17.00"]
+                        },
+                        {
+                           "giorno" : ["martedì", "giovedì", "sabato"],
+                           "orariPartenze" : ["9.00", "14.00", "19.00"]
+                       }
+                    ]
+                },
+                {
+                    "città" : "Madrid",
+                    "prezzo" : [
+                        {
+                            "età" : "maggiorenne",
+                            "prezzo" : "70"
+                        },
+                        {
+                           "età" : "bambino",
+                           "prezzo" : "35"
+                       },
+                       {
+                           "età" : "neonato",
+                           "prezzo" : "10"
+                       }
+                    ],
+                    "orario" : [
+                        {
+                            "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                            "orariPartenze" : ["10.00", "16.00"]
+                        },
+                        {
+                           "giorno" : ["martedì", "giovedì", "sabato"],
+                           "orariPartenze" : ["8.00", "12.00", "15.00"]
+                       }
+                    ]
+                },
+                {
+                    "città" : "Barcellona",
+                    "prezzo" : [
+                        {
+                            "età" : "maggiorenne",
+                            "prezzo" : "70"
+                        },
+                        {
+                           "età" : "bambino",
+                           "prezzo" : "35"
+                       },
+                       {
+                           "età" : "neonato",
+                           "prezzo" : "10"
+                       }
+                    ],
+                    "orario" : [
+                        {
+                            "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                            "orariPartenze" : ["11.00", "17.00"]
+                        },
+                        {
+                           "giorno" : ["martedì", "giovedì", "sabato"],
+                           "orariPartenze" : ["10.00", "14.00", "17.00"]
+                       }
+                    ]
+                },
+                {
+                    "città" : "New York JFK",
+                    "prezzo" : [
+                        {
+                            "età" : "maggiorenne",
+                            "prezzo" : "200"
+                        },
+                        {
+                           "età" : "bambino",
+                           "prezzo" : "100"
+                       },
+                       {
+                           "età" : "neonato",
+                           "prezzo" : "30"
+                       }
+                    ],
+                    "orario" : [
+                        {
+                            "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                            "orariPartenze" : ["08.00", "20.00"]
+                        },
+                        {
+                           "giorno" : ["martedì", "giovedì", "sabato"],
+                           "orariPartenze" : ["06.00", "19.00"]
+                       }
+                    ]
+                },
+                {
+                    "città" : "Napoli Capodichino",
+                    "prezzo" : [
+                        {
+                            "età" : "maggiorenne",
+                            "prezzo" : "60"
+                        },
+                        {
+                           "età" : "bambino",
+                           "prezzo" : "25"
+                       },
+                       {
+                           "età" : "neonato",
+                           "prezzo" : "10"
+                       }
+                    ],
+                    "orario" : [
+                        {
+                            "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                            "orariPartenze" : ["10.00", "12.00", "14.00", "16.00"]
+                        },
+                        {
+                           "giorno" : ["martedì", "giovedì", "sabato"],
+                           "orariPartenze" : ["9.00", "13.00", "18.00"]
+                       }
+                    ]
+                }
+             ]
+         },
+         {
+            "città" : "Roma Fiumicino",
+            "destinazione" : [
+                {
+                    "città" : "Milano Malpensa",
+                    "prezzo" : [
+                        {
+                            "età" : "maggiorenne",
+                            "prezzo" : "50"
+                        },
+                        {
+                           "età" : "bambino",
+                           "prezzo" : "25"
+                       },
+                       {
+                           "età" : "neonato",
+                           "prezzo" : "10"
+                       }
+                    ],
+                    "orario" : [
+                        {
+                            "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                            "orariPartenze" : ["9.00", "13.00", "18.00"]
+                        },
+                        {
+                           "giorno" : ["martedì", "giovedì", "sabato"],
+                           "orariPartenze" : ["10.00", "12.00", "14.00", "16.00"]
+                       }
+                    ]
+
+                },
+                {
+                   "città" : "Olbia Costa Smeralda",
+                   "prezzo" : [
+                       {
+                           "età" : "maggiorenne",
+                           "prezzo" : "50"
+                       },
+                       {
+                          "età" : "bambino",
+                          "prezzo" : "25"
+                      },
+                      {
+                          "età" : "neonato",
+                          "prezzo" : "10"
+                      }
+                   ],
+                   "orario" : [
+                       {
+                           "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                           "orariPartenze" : ["11.00", "13.00", "15.00", "17.00"]
+                       },
+                       {
+                          "giorno" : ["martedì", "giovedì", "sabato"],
+                          "orariPartenze" : ["9.00", "14.00", "19.00"]
+                      }
+                   ]
+               },
+               {
+                "città" : "Napoli Capodichino",
+                "prezzo" : [
+                    {
+                        "età" : "maggiorenne",
+                        "prezzo" : "50"
+                    },
+                    {
+                       "età" : "bambino",
+                       "prezzo" : "25"
+                   },
+                   {
+                       "età" : "neonato",
+                       "prezzo" : "10"
+                   }
+                ],
+                "orario" : [
+                    {
+                        "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                        "orariPartenze" : ["11.00", "13.00", "15.00", "17.00"]
+                    },
+                    {
+                       "giorno" : ["martedì", "giovedì", "sabato"],
+                       "orariPartenze" : ["9.00", "14.00", "19.00"]
+                   }
+                ]
+            },
+               {
+                   "città" : "Madrid",
+                   "prezzo" : [
+                       {
+                           "età" : "maggiorenne",
+                           "prezzo" : "70"
+                       },
+                       {
+                          "età" : "bambino",
+                          "prezzo" : "35"
+                      },
+                      {
+                          "età" : "neonato",
+                          "prezzo" : "10"
+                      }
+                   ],
+                   "orario" : [
+                       {
+                           "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                           "orariPartenze" : ["10.00", "16.00"]
+                       },
+                       {
+                          "giorno" : ["martedì", "giovedì", "sabato"],
+                          "orariPartenze" : ["8.00", "12.00", "15.00"]
+                      }
+                   ]
+               },
+               {
+                   "città" : "Barcellona",
+                   "prezzo" : [
+                       {
+                           "età" : "maggiorenne",
+                           "prezzo" : "70"
+                       },
+                       {
+                          "età" : "bambino",
+                          "prezzo" : "35"
+                      },
+                      {
+                          "età" : "neonato",
+                          "prezzo" : "10"
+                      }
+                   ],
+                   "orario" : [
+                       {
+                           "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                           "orariPartenze" : ["11.00", "17.00"]
+                       },
+                       {
+                          "giorno" : ["martedì", "giovedì", "sabato"],
+                          "orariPartenze" : ["10.00", "14.00", "17.00"]
+                      }
+                   ]
+               },
+               {
+                   "città" : "New York JFK",
+                   "prezzo" : [
+                       {
+                           "età" : "maggiorenne",
+                           "prezzo" : "200"
+                       },
+                       {
+                          "età" : "bambino",
+                          "prezzo" : "100"
+                      },
+                      {
+                          "età" : "neonato",
+                          "prezzo" : "30"
+                      }
+                   ],
+                   "orario" : [
+                       {
+                           "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                           "orariPartenze" : ["08.00", "20.00"]
+                       },
+                       {
+                          "giorno" : ["martedì", "giovedì", "sabato"],
+                          "orariPartenze" : ["06.00", "19.00"]
+                      }
+                   ]
+               }
+            ]
+         },
+         {
+            "città" : "New York JFK",
+            "destinazione" : [
+                {
+                    "città" : "Milano Malpensa",
+                    "prezzo" : [
+                        {
+                            "età" : "maggiorenne",
+                            "prezzo" : "200"
+                        },
+                        {
+                           "età" : "bambino",
+                           "prezzo" : "100"
+                       },
+                       {
+                           "età" : "neonato",
+                           "prezzo" : "30"
+                       }
+                    ],
+                    "orario" : [
+                        {
+                            "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                            "orariPartenze" : ["10.00", "12.00", "14.00", "16.00"]
+                        },
+                        {
+                           "giorno" : ["martedì", "giovedì", "sabato"],
+                           "orariPartenze" : ["9.00", "13.00", "18.00"]
+                       }
+                    ]
+
+                },           
+               {
+                   "città" : "Madrid",
+                   "prezzo" : [
+                       {
+                           "età" : "maggiorenne",
+                           "prezzo" : "70"
+                       },
+                       {
+                          "età" : "bambino",
+                          "prezzo" : "35"
+                      },
+                      {
+                          "età" : "neonato",
+                          "prezzo" : "10"
+                      }
+                   ],
+                   "orario" : [
+                       {
+                           "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                           "orariPartenze" : ["10.00", "16.00"]
+                       },
+                       {
+                          "giorno" : ["martedì", "giovedì", "sabato"],
+                          "orariPartenze" : ["8.00", "12.00", "15.00"]
+                      }
+                   ]
+               },
+               {
+                   "città" : "Barcellona",
+                   "prezzo" : [
+                       {
+                           "età" : "maggiorenne",
+                           "prezzo" : "70"
+                       },
+                       {
+                          "età" : "bambino",
+                          "prezzo" : "35"
+                      },
+                      {
+                          "età" : "neonato",
+                          "prezzo" : "10"
+                      }
+                   ],
+                   "orario" : [
+                       {
+                           "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                           "orariPartenze" : ["11.00", "17.00"]
+                       },
+                       {
+                          "giorno" : ["martedì", "giovedì", "sabato"],
+                          "orariPartenze" : ["10.00", "14.00", "17.00"]
+                      }
+                   ]
+               },
+               {
+                   "città" : "Roma Fiumicino",
+                   "prezzo" : [
+                       {
+                           "età" : "maggiorenne",
+                           "prezzo" : "200"
+                       },
+                       {
+                          "età" : "bambino",
+                          "prezzo" : "100"
+                      },
+                      {
+                          "età" : "neonato",
+                          "prezzo" : "30"
+                      }
+                   ],
+                   "orario" : [
+                       {
+                           "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                           "orariPartenze" : ["08.00", "20.00"]
+                       },
+                       {
+                          "giorno" : ["martedì", "giovedì", "sabato"],
+                          "orariPartenze" : ["06.00", "19.00"]
+                      }
+                   ]
+               }
+            ]
+         },
+         {
+            "città" : "Olbia Costa Smeralda",
+            "destinazione" : [
+                {
+                    "città" : "Milano Malpensa",
+                    "prezzo" : [
+                        {
+                            "età" : "maggiorenne",
+                            "prezzo" : "50"
+                        },
+                        {
+                           "età" : "bambino",
+                           "prezzo" : "25"
+                       },
+                       {
+                           "età" : "neonato",
+                           "prezzo" : "10"
+                       }
+                    ],
+                    "orario" : [
+                        {
+                            "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                            "orariPartenze" : ["10.00", "12.00", "14.00", "16.00"]
+                        },
+                        {
+                           "giorno" : ["martedì", "giovedì", "sabato"],
+                           "orariPartenze" : ["9.00", "13.00", "18.00"]
+                       }
+                    ]
+
+                },           
+               {
+                   "città" : "Roma Fiumicino",
+                   "prezzo" : [
+                       {
+                           "età" : "maggiorenne",
+                           "prezzo" : "70"
+                       },
+                       {
+                          "età" : "bambino",
+                          "prezzo" : "35"
+                      },
+                      {
+                          "età" : "neonato",
+                          "prezzo" : "10"
+                      }
+                   ],
+                   "orario" : [
+                       {
+                           "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                           "orariPartenze" : ["10.00", "16.00"]
+                       },
+                       {
+                          "giorno" : ["martedì", "giovedì", "sabato"],
+                          "orariPartenze" : ["8.00", "12.00", "15.00"]
+                      }
+                   ]
+               },
+               {
+                   "città" : "Napoli Capodichino",
+                   "prezzo" : [
+                    {
+                        "età" : "maggiorenne",
+                        "prezzo" : "70"
+                    },
+                    {
+                       "età" : "bambino",
+                       "prezzo" : "35"
+                   },
+                   {
+                       "età" : "neonato",
+                       "prezzo" : "10"
+                   }
+                    ],
+                    "orario" : [
+                        {
+                            "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                            "orariPartenze" : ["11.00", "17.00"]
+                        },
+                        {
+                            "giorno" : ["martedì", "giovedì", "sabato"],
+                            "orariPartenze" : ["7.00", "14.00", "17.00"]
+                        }
+                    ]
+               }
+            ]
+         },
+         {
+            "città" : "Napoli Capodichino",
+            "destinazione" : [
+                {
+                    "città" : "Milano Malpensa",
+                    "prezzo" : [
+                        {
+                            "età" : "maggiorenne",
+                            "prezzo" : "70"
+                        },
+                        {
+                           "età" : "bambino",
+                           "prezzo" : "35"
+                       },
+                       {
+                           "età" : "neonato",
+                           "prezzo" : "10"
+                       }
+                    ],
+                    "orario" : [
+                        {
+                            "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                            "orariPartenze" : ["9.00", "13.00", "18.00"]
+                        },
+                        {
+                           "giorno" : ["martedì", "giovedì", "sabato"],
+                           "orariPartenze" : ["10.00", "12.00", "14.00", "16.00"]
+                       }
+                    ]
+
+                },           
+               {
+                   "città" : "Roma Fiumicino",
+                   "prezzo" : [
+                        {
+                            "età" : "maggiorenne",
+                            "prezzo" : "55"
+                        },
+                        {
+                            "età" : "bambino",
+                            "prezzo" : "25"
+                        },
+                        {
+                            "età" : "neonato",
+                            "prezzo" : "10"
+                        }
+                    ],
+                   "orario" : [
+                       {
+                            "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                            "orariPartenze" : ["10.00", "16.00"]
+                        },
+                       {
+                            "giorno" : ["martedì", "giovedì", "sabato"],
+                            "orariPartenze" : ["8.00", "12.00", "15.00"]
+                        }
+                   ]
+               },
+               {
+                    "città" : "Madrid",
+                    "prezzo" : [
+                        {
+                            "età" : "maggiorenne",
+                            "prezzo" : "70"
+                        },
+                        {
+                            "età" : "bambino",
+                            "prezzo" : "35"
+                        },
+                        {
+                            "età" : "neonato",
+                            "prezzo" : "10"
+                        }
+                        ],
+                    "orario" : [
+                        {
+                            "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                            "orariPartenze" : ["10.00", "16.00"]
+                        },
+                        {
+                            "giorno" : ["martedì", "giovedì", "sabato"],
+                            "orariPartenze" : ["8.00", "12.00", "15.00"]
+                        }
+                    ]
+                },
+                {
+                    "città" : "Barcellona",
+                    "prezzo" : [
+                        {
+                            "età" : "maggiorenne",
+                            "prezzo" : "70"
+                        },
+                            {
+                            "età" : "bambino",
+                            "prezzo" : "35"
+                        },
+                        {
+                            "età" : "neonato",
+                            "prezzo" : "10"
+                        }
+                    ],
+                    "orario" : [
+                        {
+                            "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                            "orariPartenze" : ["11.00", "17.00"]
+                        },
+                            {
+                            "giorno" : ["martedì", "giovedì", "sabato"],
+                            "orariPartenze" : ["10.00", "14.00", "17.00"]
+                            }   
+                        ]
+                },
+                {
+                    "città" : "Olbia Costa Smeralda",
+                    "prezzo" : [
+                        {
+                            "età" : "maggiorenne",
+                            "prezzo" : "70"
+                        },
+                        {
+                            "età" : "bambino",
+                            "prezzo" : "35"
+                        },
+                        {
+                            "età" : "neonato",
+                            "prezzo" : "10"
+                        }
+                        ],
+                    "orario" : [
+                        {
+                            "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                            "orariPartenze" : ["11.00", "17.00"]
+                        },
+                        {
+                            "giorno" : ["martedì", "giovedì", "sabato"],
+                            "orariPartenze" : ["10.00", "14.00", "17.00"]
+                        }   
+                    ]
+                }
+            ]
+         },
+         {
+            "città" : "Madrid",
+            "destinazione" : [
+                {
+                    "città" : "Milano Malpensa",
+                    "prezzo" : [
+                        {
+                            "età" : "maggiorenne",
+                            "prezzo" : "70"
+                        },
+                        {
+                           "età" : "bambino",
+                           "prezzo" : "30"
+                       },
+                       {
+                           "età" : "neonato",
+                           "prezzo" : "10"
+                       }
+                    ],
+                    "orario" : [
+                        {
+                            "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                            "orariPartenze" : ["10.00", "12.00", "14.00", "16.00"]
+                        },
+                        {
+                           "giorno" : ["martedì", "giovedì", "sabato"],
+                           "orariPartenze" : ["9.00", "13.00", "18.00"]
+                       }
+                    ]
+
+                },           
+               {
+                   "città" : "Barcellona",
+                   "prezzo" : [
+                       {
+                           "età" : "maggiorenne",
+                           "prezzo" : "50"
+                       },
+                       {
+                          "età" : "bambino",
+                          "prezzo" : "25"
+                      },
+                      {
+                          "età" : "neonato",
+                          "prezzo" : "10"
+                      }
+                   ],
+                   "orario" : [
+                       {
+                           "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                           "orariPartenze" : ["10.00", "16.00"]
+                       },
+                       {
+                          "giorno" : ["martedì", "giovedì", "sabato"],
+                          "orariPartenze" : ["8.00", "12.00", "15.00"]
+                      }
+                   ]
+               },
+               {
+                   "città" : "Roma Fiumicino",
+                   "prezzo" : [
+                       {
+                           "età" : "maggiorenne",
+                           "prezzo" : "80"
+                       },
+                       {
+                          "età" : "bambino",
+                          "prezzo" : "35"
+                      },
+                      {
+                          "età" : "neonato",
+                          "prezzo" : "10"
+                      }
+                   ],
+                   "orario" : [
+                       {
+                           "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                           "orariPartenze" : ["11.00", "17.00"]
+                       },
+                       {
+                          "giorno" : ["martedì", "giovedì", "sabato"],
+                          "orariPartenze" : ["10.00", "14.00", "17.00"]
+                      }
+                   ]
+               },
+               {
+                   "città" : "New York JFK",
+                   "prezzo" : [
+                       {
+                           "età" : "maggiorenne",
+                           "prezzo" : "200"
+                       },
+                       {
+                          "età" : "bambino",
+                          "prezzo" : "100"
+                      },
+                      {
+                          "età" : "neonato",
+                          "prezzo" : "30"
+                      }
+                   ],
+                   "orario" : [
+                       {
+                           "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                           "orariPartenze" : ["08.00", "20.00"]
+                       },
+                       {
+                          "giorno" : ["martedì", "giovedì", "sabato"],
+                          "orariPartenze" : ["06.00", "19.00"]
+                      }
+                   ]
+               },
+               {
+                    "città" : "Napoli Capodichino",
+                    "prezzo" : [
+                        {
+                            "età" : "maggiorenne",
+                            "prezzo" : "80"
+                        },
+                        {
+                        "età" : "bambino",
+                        "prezzo" : "35"
+                    },
+                    {
+                        "età" : "neonato",
+                        "prezzo" : "10"
+                    }
+                    ],
+                    "orario" : [
+                        {
+                            "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                            "orariPartenze" : ["11.00", "17.00"]
+                        },
+                        {
+                        "giorno" : ["martedì", "giovedì", "sabato"],
+                        "orariPartenze" : ["10.00", "14.00", "17.00"]
+                    }
+                    ]
+                }
+            ]
+         },
+         {
+            "città" : "Barcellona",
+            "destinazione" : [
+                {
+                    "città" : "Milano Malpensa",
+                    "prezzo" : [
+                        {
+                            "età" : "maggiorenne",
+                            "prezzo" : "70"
+                        },
+                        {
+                           "età" : "bambino",
+                           "prezzo" : "30"
+                       },
+                       {
+                           "età" : "neonato",
+                           "prezzo" : "10"
+                       }
+                    ],
+                    "orario" : [
+                        {
+                            "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                            "orariPartenze" : ["10.00", "12.00", "14.00", "16.00"]
+                        },
+                        {
+                           "giorno" : ["martedì", "giovedì", "sabato"],
+                           "orariPartenze" : ["9.00", "13.00", "18.00"]
+                       }
+                    ]
+
+                },           
+               {
+                   "città" : "Madrid",
+                   "prezzo" : [
+                       {
+                           "età" : "maggiorenne",
+                           "prezzo" : "50"
+                       },
+                       {
+                          "età" : "bambino",
+                          "prezzo" : "25"
+                      },
+                      {
+                          "età" : "neonato",
+                          "prezzo" : "10"
+                      }
+                   ],
+                   "orario" : [
+                       {
+                           "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                           "orariPartenze" : ["10.00", "16.00"]
+                       },
+                       {
+                          "giorno" : ["martedì", "giovedì", "sabato"],
+                          "orariPartenze" : ["8.00", "12.00", "15.00"]
+                      }
+                   ]
+               },
+               {
+                   "città" : "Roma Fiumicino",
+                   "prezzo" : [
+                       {
+                           "età" : "maggiorenne",
+                           "prezzo" : "80"
+                       },
+                       {
+                          "età" : "bambino",
+                          "prezzo" : "35"
+                      },
+                      {
+                          "età" : "neonato",
+                          "prezzo" : "10"
+                      }
+                   ],
+                   "orario" : [
+                       {
+                           "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                           "orariPartenze" : ["11.00", "17.00"]
+                       },
+                       {
+                          "giorno" : ["martedì", "giovedì", "sabato"],
+                          "orariPartenze" : ["10.00", "14.00", "17.00"]
+                      }
+                   ]
+               },
+               {
+                   "città" : "New York JFK",
+                   "prezzo" : [
+                       {
+                           "età" : "maggiorenne",
+                           "prezzo" : "200"
+                       },
+                       {
+                          "età" : "bambino",
+                          "prezzo" : "100"
+                      },
+                      {
+                          "età" : "neonato",
+                          "prezzo" : "30"
+                      }
+                   ],
+                   "orario" : [
+                       {
+                           "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                           "orariPartenze" : ["08.00", "20.00"]
+                       },
+                       {
+                          "giorno" : ["martedì", "giovedì", "sabato"],
+                          "orariPartenze" : ["07.00", "19.00"]
+                      }
+                   ]
+               },
+               {
+                    "città" : "Napoli Capodichino",
+                    "prezzo" : [
+                        {
+                            "età" : "maggiorenne",
+                            "prezzo" : "80"
+                        },
+                        {
+                            "età" : "bambino",
+                            "prezzo" : "35"
+                        },
+                        {
+                            "età" : "neonato",
+                            "prezzo" : "10"
+                        }
+                    ],
+                    "orario" : [
+                        {
+                            "giorno" : ["lunedì", "mercoledì", "venerdì", "domenica"],
+                            "orariPartenze" : ["11.00", "17.00"]
+                        },
+                        {
+                            "giorno" : ["martedì", "giovedì", "sabato"],
+                            "orariPartenze" : ["10.00", "14.00", "17.00"]
+                        }
+                    ]
+                }
+            ]
+         }
+     ]
+}

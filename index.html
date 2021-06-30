@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">    
+    <title>TravelBooking</title>
+</head>
+<body onload="loadPagina()">
+    <div class="boxNavBar">
+        <h1>Scegli il tuo viaggio</h1>
+    </div>
+    <div class="boxPage">
+        <div class="formBoxBack">
+            <div class="boxForm">
+                <!-- Andata e Ritorno -->
+                <div class="boxCittàSelect">
+                    <!-- Partenza -->
+                    <label for="partenza">Da:</label>
+                    <div class="custom-select">
+                        <select id="citiesP">
+                            <option value="partenza">Partenza</option>
+                        </select>
+                        <span class="custom-arrow"></span>
+                    </div>
+                    <!-- Arrivo -->
+                    <label for="destinazione">A:&nbsp;&nbsp;</label>
+                    <div class="custom-select">
+                        <select id="citiesD">
+                            <option value="ritorno">Ritorno</option>
+                        </select>
+                        <span class="custom-arrow"></span>
+                    </div>
+                    <span id="errorCittà">Inserire tutti i campi</span>
+                </div>
+                <!-- Data -->
+                <div class="backBoxDatePicker">
+                    <div class="BoxSoloandataFleg">
+                        <input type="checkbox" id="checkSoloandata" value="checkSoloandata">
+                        <label for="checkSoloandata" class="labelSoloandata">Solo andata</label>
+                    </div>
+                    <div class="backSoloDataOra">
+                        <div class="boxDataOraPartenza">
+                            <div class="calendarioPartenza">
+                                <div class="giornoP">
+                                    <div class="custom-select">
+                                        <select name="anno" id="annoP">
+                                            <option value="Anno">Anno</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                        </select>
+                                        <span class="custom-arrow"></span>
+                                    </div>
+                                    <div class="custom-select">
+                                        <select name="mese" id="meseP">
+                                            <option value="Mese">Mese</option>
+                                            <option value="0">Gennaio</option>
+                                            <option value="1">Febbraio</option>
+                                            <option value="2">Marzo</option>
+                                            <option value="3">Aprile</option>
+                                            <option value="4">Maggio</option>
+                                            <option value="5">Giugno</option>
+                                            <option value="6">Luglio</option>
+                                            <option value="7">Agosto</option>
+                                            <option value="8">Settembre</option>
+                                            <option value="9">Ottobre</option>
+                                            <option value="10">Novembre</option>
+                                            <option value="11">Dicembre</option>
+                                        </select>
+                                        <span class="custom-arrow"></span>
+                                    </div>
+                                    <div class="custom-select">
+                                        <select name="giorno" id="giornoP" class>
+                                            <option value="Giorno">Giorno</option>
+                                        </select>
+                                        <span class="custom-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="orarioP">
+                                    <div class="custom-select">
+                                        <select name="ora" id="oraP">
+                                            <option value="HH">HH:00</option>
+                                            <option value="6">6:00</option>
+                                            <option value="7">7:00</option>
+                                            <option value="8">8:00</option>
+                                            <option value="9">9:00</option>
+                                            <option value="10">10:00</option>
+                                            <option value="11">11:00</option>
+                                            <option value="12">12:00</option>
+                                            <option value="13">13:00</option>
+                                            <option value="14">14:00</option>
+                                            <option value="15">15:00</option>
+                                            <option value="16">16:00</option>
+                                            <option value="17">17:00</option>
+                                            <option value="18">18:00</option>
+                                            <option value="19">19:00</option>
+                                        </select>
+                                        <span class="custom-arrow"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="boxDataOraRitorno">
+                            <div class="BoxTitleRitorno">
+                                <label class="labelTitleRitorno">Ritorno</label>
+                            </div>
+                            <div class="calendarioRitorno">
+                                <div class="giornoR">
+                                    <div class="custom-select">
+                                        <select name="anno" id="annoR">
+                                            <option value="Anno">Anno</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                        </select>
+                                        <span class="custom-arrow"></span>
+                                    </div>
+                                    <div class="custom-select">
+                                        <select name="mese" id="meseR">
+                                            <option value="Mese">Mese</option>
+                                            <option value="0">Gennaio</option>
+                                            <option value="1">Febbraio</option>
+                                            <option value="2">Marzo</option>
+                                            <option value="3">Aprile</option>
+                                            <option value="4">Maggio</option>
+                                            <option value="5">Giugno</option>
+                                            <option value="6">Luglio</option>
+                                            <option value="7">Agosto</option>
+                                            <option value="8">Settembre</option>
+                                            <option value="9">Ottobre</option>
+                                            <option value="10">Novembre</option>
+                                            <option value="11">Dicembre</option>
+                                        </select>
+                                        <span class="custom-arrow"></span>
+                                    </div>
+                                    <div class="custom-select">
+                                        <select name="giorno" id="giornoR">
+                                            <option value="Giorno">Giorno</option>
+                                        </select>
+                                        <span class="custom-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="orarioR">
+                                    <div class="custom-select">
+                                        <select name="ora" id="oraR">
+                                            <option value="HH">HH:00</option>
+                                            <option value="6">6:00</option>
+                                            <option value="7">7:00</option>
+                                            <option value="8">8:00</option>
+                                            <option value="9">9:00</option>
+                                            <option value="10">10:00</option>
+                                            <option value="11">11:00</option>
+                                            <option value="12">12:00</option>
+                                            <option value="13">13:00</option>
+                                            <option value="14">14:00</option>
+                                            <option value="15">15:00</option>
+                                            <option value="16">16:00</option>
+                                            <option value="17">17:00</option>
+                                            <option value="18">18:00</option>
+                                            <option value="19">19:00</option>
+                                        </select>
+                                        <span class="custom-arrow"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span id="errorData">Inserire tutti i campi e valori corretti</span>
+                </div>
+                <!-- Passeggeri -->
+                <div class="backBoxPasseggeri">
+                    <div class="boxPasseggeri">
+                        <label for="adulti">Adulti (17+)</label>
+                        <div class="custom-select">
+                            <input type="number" id="adulti" class="numberBox" value="1" min="1">
+                            <span class="custom-arrowP"></span>
+                        </div>
+                    </div>
+                    <div class="boxPasseggeri">
+                        <label for="adolescenti">Adolescenti (3/16)</label>
+                        <div class="custom-select">
+                            <input type="number" id="adolescenti" class="numberBox" value="0" min="0">
+                            <span class="custom-arrowP"></span>
+                        </div>
+                    </div>
+                    <div class="boxPasseggeri">
+                        <label for="neonati">Neonati (0/2)</label>
+                        <div class="custom-select">
+                            <input type="number" id="neonati" class="numberBox" value="0" min="0">
+                            <span class="custom-arrowP"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bottone -->
+            </div>
+            
+        </div>
+        <div class="invioDati">
+            <span id="invioDatiTesto">Cerca</span>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

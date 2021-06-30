@@ -1,0 +1,361 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+}
+
+p, label, span{
+    font-family: 'Inter', sans-serif;
+    font-weight: thin;
+}
+
+:root{
+    --ombra: 0px 0px 10px 0px rgba(0,0,0,0.10);
+    --white: white;
+    --lightblue: lightskyblue;
+    --orange: darkorange; 
+    --blue: rgb(43, 196, 223);
+    }
+
+/* Background */
+body{
+    width: 100%;
+    height: 100vh;
+    background-image:url(/img/BackTravel.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;  
+}
+
+.boxNavBar{
+    display: flex;
+    height: auto;
+    width: 100%;
+    background-color:darkorange;
+    justify-content: center;
+    align-items:center;
+    color: white;
+    padding: 10px;
+}
+
+.navTitle{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    padding-left: 42%;
+}
+
+.navTitle h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+
+.navIndietro{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+    align-items: center;
+    padding-right: 30px;
+}
+
+.navIndietro a {
+    text-decoration: none;
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+
+.spanHome{
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.boxPagamento{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: auto;
+    margin-top: 25px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    border: 5px solid;
+    border-color:var(--orange);
+    background-color: var(--lightblue);
+    color: var(--white);
+}
+
+.group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 10px 0px;
+}
+
+label{
+    position: relative;
+    font-size: 0.75rem;
+    padding: 5px;
+}
+
+.boxTitlePagamento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+}
+
+.metodoTitle{
+    font-size: 1rem;
+}
+
+.contenitorePrezzoTot{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.paragrafiElementi{
+    padding: 7px;
+    font-size: 0.8rem;
+}
+
+.payPal{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.boxPaypal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.boxMail, .boxPsw, .boxSub {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.boxPaypal input{
+    width: 90%;
+    height: 20px;
+    font-size: 0.7rem;
+}
+
+.boxSub{
+    margin: 10px 0px;
+}
+
+.btnPaypal{
+    position: relative;
+    width: 150px;
+    height: 30px;
+    font-size: 0.8rem;
+    background-color: transparent;
+}
+
+.btnPaypalSpan{
+    position: absolute;
+    top: -5px;
+    left: -10px;
+    width: 150px;
+    height: auto;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue);
+    border: 3px solid var(--orange);
+    color: white;
+    padding:5px;
+    cursor: pointer;
+}
+
+.btnPaypalSpan:hover{
+    background-color: rgb(39, 166, 189);
+}
+
+.creditCard{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.boxInfoCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.boxNumberCard, .boxScadenzaCard, .boxCvvCard{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.creditCard input{
+    width: 90%;
+    height: 20px;
+    font-size: 0.7rem;
+}
+
+.btnCreditSpan{
+    position: absolute;
+    top: -5px;
+    left: -10px;
+    width: 150px;
+    height: auto;
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue);
+    border: 3px solid var(--orange);
+    color: white;
+    padding:5px;
+    cursor: pointer;
+}
+
+.btnCreditSpan:hover{
+    background-color: rgb(39, 166, 189);
+}
+
+#errorNumero{
+    display: none;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#errorCvv{
+    display: none;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#errorScadenza{
+    display: none;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.errore{
+    color: red;
+    font-size: 0.7rem;
+}
+
+@media only screen and (max-width:1150px) {
+    .navTitle{
+        padding-left: 42%;
+    }
+
+    .boxPagamento{
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    .navTitle{
+        padding-left: 42%;
+    }
+
+    .boxPagamento{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width:600px) {
+
+    .navTitle h1{
+        font-size: 1rem;
+    }
+
+    .navTitle{
+        padding-left: 40%;
+    }
+
+    .boxPagamento{
+        width: 80%;
+    }
+
+    .metodoTitle{
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width:500px) {
+
+    .navTitle h1{
+        font-size: 1rem;
+    }
+
+    .spanHome{
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width:400px) {
+
+    .navTitle h1{
+        font-size: 1rem;
+    }
+
+    .navTitle{
+        padding-left: 35%;
+    }
+
+    .spanHome{
+        font-size: 0.8rem;
+    }
+
+    .metodoTitle{
+        font-size: 0.65rem;
+    }
+}

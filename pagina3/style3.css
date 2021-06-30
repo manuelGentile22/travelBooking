@@ -1,0 +1,533 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+}
+
+p, label, span{
+    font-family: 'Inter', sans-serif;
+    font-weight: thin;
+}
+
+:root{
+    --ombra: 0px 0px 10px 0px rgba(0,0,0,0.10);
+    --white: white;
+    --lightblue: lightskyblue;
+    --orange: darkorange; 
+    --blue: rgb(43, 196, 223);
+    }
+
+/* Background */
+body{
+    width: 100%;
+    height: 100vh;
+    background-image:url(/img/BackTravel.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;  
+}
+
+.boxNavBar{
+    display: flex;
+    height: auto;
+    width: 100%;
+    background-color:darkorange;
+    justify-content: center;
+    align-items:center;
+    color: white;
+    padding: 10px;
+}
+
+.navTitle{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    padding-left: 39.5%;
+}
+
+.navTitle h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+
+.navIndietro{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+    align-items: center;
+    padding-right: 30px;
+}
+
+.navIndietro a {
+    text-decoration: none;
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+
+.spanHome{
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+/* Background scelte */
+
+.flexBox{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-flow: row;
+    justify-content: center;
+}
+
+.box1{
+    position: relative;
+    width: 60%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.box2{
+    position: relative;
+    width: 30%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.boxInserimentoDati{
+    position: relative;
+    width: 90%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color:rgb(252, 249, 240);
+    border: 5px solid;
+    border-color: rgb(43, 196, 223);
+    margin-top: 20px;
+    margin-left: 15px;
+    padding: 15px;
+}
+
+.boxRiepilogo{
+    position: relative;
+    width: 90%;
+    height: auto;
+    background-color:rgb(252, 249, 240);
+    border: 5px solid;
+    border-color: rgb(43, 196, 223);
+    margin-top: 20px;
+    margin-right: 15px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#containerRiepilogo{
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+.containerRiepilogoAndata{
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+.containerRiepilogoRitorno{
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+#containerInserimentoDati{
+    display: flex;
+    flex-flow: row wrap;
+    height: auto;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media only screen and (max-width:900px) {
+    .flexBox{
+        display: flex;
+        width: 100%;
+        height: auto;
+        flex-direction:  column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #containerRiepilogo{
+        display: flex;
+        align-items: left;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .box1{
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .boxRiepilogo{
+        position: relative;
+        width: 90%;
+        height: auto;
+        background-color:rgb(252, 249, 240);
+        border: 5px solid;
+        border-color: rgb(43, 196, 223);
+        margin: 20px 0px 0px 15px;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .box2{
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .boxInserimentoDati{
+        position: relative;
+        width: 90%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color:rgb(252, 249, 240);
+        border: 5px solid;
+        border-color: rgb(43, 196, 223);
+        margin-top: 20px;
+        padding: 15px;
+        justify-content: center;
+    }
+
+    .navTitle h1{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width:600px) {
+
+    .navTitle h1{
+        font-size: 0.9rem;
+    }
+
+    .box1{
+        position: relative;
+        width: 90%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .box2{
+        position: relative;
+        width: 90%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width:500px) {
+
+    .navTitle h1{
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width:400px) {
+
+    .navTitle h1{
+        font-size: 0.8rem;
+    }
+}
+
+.stileTitleRiepilogo{
+    font-size: 1rem;
+    margin-top: 20px;
+    padding: 7px;
+}
+
+.paragrafiElementi{
+    padding: 7px;
+    font-size: 0.65rem;
+}
+
+.contenitoreCittàPD{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.contenitoreCittàPDR{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.contenitoreCittàPartenza{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: left;
+    align-items: center;
+}
+
+.contenitoreCittàPartenzaR{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: left;
+    align-items: center;
+}
+
+.contenitoreCittàDestinazione{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: left;
+    align-items: center;
+}
+
+.contenitoreCittàDestinazioneR{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: left;
+    align-items: center;
+}
+
+.contenitorePasseggeri{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.contenitoreAdulto{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: left;
+    align-items: center;
+}
+
+.contenitoreAdolescente{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenitoreNeonato{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenitoreData{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.contenitoreDataR{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.contenitoreDataA{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: left;
+    align-items: center;
+}
+
+.contenitoreDataRit{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: left;
+    align-items: center;
+}
+
+.contenitoreOrario{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    margin-top: 10px;
+}
+
+.contenitoreTariffa{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    margin-top: 10px;
+}
+
+.contenitorePrezzoTot{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    margin-top: 10px;
+}
+
+.boxPasseggero{
+    display: flex;
+    width: auto;
+    min-width: 250px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.stileTitlePasseggero{
+    font-size: 1rem;
+    margin-top: 20px;
+    padding: 7px;
+}
+
+.contenitoreNominativo{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenitoreNominativo input{
+    height: 20px;
+    width: 70%;
+    font-size: 0.7rem;
+}
+.contenitoreNominativo label{
+    margin: 5px;
+    font-size: 0.8rem;
+}
+
+.contenitoreEtà{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenitoreEtà input{
+    height: 20px;
+    width: 70%;
+    font-size: 0.7rem;
+}
+.contenitoreEtà label{
+    margin: 5px;
+    font-size: 0.8rem;
+}
+
+.invioDati{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonPagamento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: auto;
+    background-color: var(--blue);
+    border: 3px solid var(--orange);
+    color: white;
+    font-size: 0.7rem;
+    margin: 10px;
+    padding:10px;
+    cursor: pointer;
+}
+
+.buttonPagamento:hover{
+    background-color: rgb(39, 166, 189);
+}
+
+
+#erroreDati{
+    width: 100%;
+    height: auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.erroreDatiTesto{
+    margin: 5px;
+    font-size: 0.8rem;
+    color: red;
+}
