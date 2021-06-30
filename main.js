@@ -3,7 +3,7 @@ let tratteJson = function(){
     let tmp = null;
     $.ajax({
         async: false,
-        url : '/DBJson/tratte.json',
+        url : 'https://manuelgentile22.github.io/travelBooking//DBJson/tratte.json',
         method: 'GET',
         success: function(data){
             tmp = data;
