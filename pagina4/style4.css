@@ -22,7 +22,7 @@ p, label, span{
 body{
     width: 100%;
     height: 100vh;
-    background-image:url(/img/BackTravel.jpg);
+    background-image:url(https://manuelgentile22.github.io/travelBooking/img/BackTravel.jpg);
     background-size: contain;
     background-repeat: repeat;
     background-position: center;  

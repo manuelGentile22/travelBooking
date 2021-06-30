@@ -860,7 +860,7 @@ function checkDatiNeonati(){
 }
 
 function EnterPage(){
-  window.open("../pagina4/index4.html", "_self");
+  window.open("https://manuelgentile22.github.io/travelBooking/pagina4/index4.html", "_self");
 }
 
 console.log(partenza+' '+destinazione+' '+passeggeri+' '+prezzoPA+' '+dataPartenza+' '+orarioPartenza+' '+tariffaPartenza);

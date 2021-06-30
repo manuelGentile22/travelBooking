@@ -709,7 +709,7 @@ function cencellaCookie(nomeCookie)
 }
 
 function EnterPage(){
-    window.open("../pagina3/index3.html", "_self");
+    window.open("https://manuelgentile22.github.io/travelBooking/pagina3/index3.html", "_self");
 }
 
 

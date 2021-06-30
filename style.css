@@ -22,7 +22,7 @@ p, label, span{
 body{
     width: 100vw;
     height: 100vh;
-    background-image:url(/img/BackTravel.jpg);
+    background-image:url(https://manuelgentile22.github.io/travelBooking/img/BackTravel.jpg);
     background-size: contain;
     background-repeat: repeat;
     background-position: center;
@@ -43,6 +43,50 @@ body{
     font-weight: thin;
 }
 
+.navTitle{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    padding-left: 39.5%;
+}
+
+.navTitle h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+
+.navIndietro{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+    align-items: center;
+    padding-right: 30px;
+}
+
+a .spanHome{
+    font-size: 1.2em;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    color: var(--white);
+}
+
+a .spanHome:hover{
+    text-decoration: none;
+}
+
+.navIndietro a {
+    text-decoration: none;
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+
 .boxPage{
     display: flex;
     align-items: center;
@@ -50,6 +94,10 @@ body{
     width: 100%;
     height: auto;
 }
+
+a {
+    text-decoration: none;
+  }
 
 /* Background form */
 

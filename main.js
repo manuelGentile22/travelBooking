@@ -306,7 +306,7 @@ function cencellaCookie(nomeCookie)
 // indirizzamento nuova pagina
 
 function EnterPage(){
-    window.open("/pagina2/index2.html", "_self");
+    window.open("https://manuelgentile22.github.io/travelBooking/pagina2/index2.html", "_self");
 }
 
 //creazione oggetto con dati dell'utente
