@@ -639,7 +639,7 @@ label{
 #boxInfoTariffe{
     position: absolute;
     z-index: 1;
-    left: -190px;
+    left: -0px;
     height: auto;
     width: auto;
     border: 5px solid;
