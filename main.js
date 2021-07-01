@@ -509,13 +509,13 @@ function controllo(){
     let checkAdultiN = document.getElementById('adulti');
     let checkAdolescentiN = document.getElementById('adolescenti');
     let checkNeonatiN = document.getElementById('neonati');
-        if(isNaN(checkAdultiN.value)){
+        if(isNaN(checkAdultiN.value) || checkAdultiN.value<=0){
             errorePasseggeri = true;
         } 
-        if(isNaN(checkAdolescentiN.value)){
+        if(isNaN(checkAdolescentiN.value) || checkAdolescentiN.value<0){
             errorePasseggeri = true;
         }
-        if(isNaN(checkNeonatiN.value)){
+        if(isNaN(checkNeonatiN.value) || checkNeonatiN.value<0){
             errorePasseggeri = true;
         }
 
