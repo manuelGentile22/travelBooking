@@ -212,7 +212,7 @@ function generaRiepilogo(){
 
   //Creazioni del contenitore Prezzo Tot
   if(tariffaPartenza=='Plus'){
-    prezzoTotAndata += 40; 
+    prezzoTotAndata = 40*passeggeri[0]+40*passeggeri[1]+40*passeggeri[2] ; 
   }
   let m,a,n;
   for(m=0;m<passeggeri[0];m++){
@@ -348,7 +348,7 @@ function generaRiepilogo(){
     boxTariffaR.appendChild(paragrafoTariffaRitorno);
     //Creazioni del contenitore Prezzo Tot
     if(tariffaRitorno == 'Plus'){
-      prezzoTotRitorno += 40; 
+      prezzoTotRitorno = 40*passeggeriRitorno[0]+40*passeggeriRitorno[1]+40*passeggeriRitorno[2]; 
     }
     let mr,ar,nr;
     for(mr=0;mr<passeggeriRitorno[0];mr++){

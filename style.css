@@ -243,6 +243,20 @@ a {
     margin-top: 1px;
 }
 
+#errorPasseggeri{
+    display: none;
+    color: red;
+}
+
+#errorPasseggeri.active{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+}
+
 
 /* Passeggeri */
 
@@ -263,6 +277,14 @@ a {
     justify-content: space-around;
     align-items: center;
     width: auto;
+}
+
+.boxErrorePasseggeri{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
 }
 
 /* Box data partenza */
@@ -571,7 +593,4 @@ a {
         font-family: 'Roboto', sans-serif;
         font-weight: normal;
     }
-
-
-    
 }

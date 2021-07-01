@@ -503,8 +503,28 @@ function controllo(){
                 erroreOrarioRitorno = true;
             }
         }
+    
+    //controllo passeggeri
+    let errorePasseggeri = false;
+    let checkAdultiN = document.getElementById('adulti');
+    let checkAdolescentiN = document.getElementById('adolescenti');
+    let checkNeonatiN = document.getElementById('neonati');
+        if(isNaN(checkAdultiN.value)){
+            errorePasseggeri = true;
+        } 
+        if(isNaN(checkAdolescentiN.value)){
+            errorePasseggeri = true;
+        }
+        if(isNaN(checkNeonatiN.value)){
+            errorePasseggeri = true;
+        }
 
     //attivazione errori nel form
+    if(errorePasseggeri == true){
+        activeErrorPasseggeri()
+    }else{
+        InactiveErrorPasseggeri()
+    }
 
     if(errorCittà == true){
         activeError()
@@ -675,6 +695,20 @@ function activeErrorOraR(){
 
 function InactiveErrorOraR(){
     let spanData = document.getElementById('errorOrarioR');
+    spanData.classList.remove("active");
+}
+
+//funzioni di errore ( passeggeri )
+
+function activeErrorPasseggeri(){
+    let spanData = document.getElementById('errorPasseggeri');
+    if(!spanData.classList.contains('active')){
+        spanData.classList.add('active');
+    }
+}
+
+function InactiveErrorPasseggeri(){
+    let spanData = document.getElementById('errorPasseggeri');
     spanData.classList.remove("active");
 }
 

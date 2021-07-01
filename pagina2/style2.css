@@ -686,7 +686,7 @@ label{
     padding: 10px;
 }
 
-.ciao{
+.elenco{
     font-size: 15px;
 }
 
@@ -730,6 +730,24 @@ label{
         width: 100%;
         font-family: 'Roboto', sans-serif;
         font-weight: normal;
+    }
+
+    #boxInfoTariffe div{
+        width: 150px;
+        height: auto;
+        display: flex;
+        flex-flow: row wrap;
+        overflow: scroll;
+        padding: 10px;
+    }
+    
+    #boxInfoTariffeR div{
+        width: 150px;
+        height: auto;
+        display: flex;
+        flex-flow: row wrap;
+        overflow: scroll;
+        padding: 10px;
     }
 
 
