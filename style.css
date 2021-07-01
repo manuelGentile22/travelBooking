@@ -43,29 +43,19 @@ body{
     font-weight: thin;
 }
 
-.navTitle{
-    height: auto;
+#titleNavBar{
+    margin: 0px;
+    padding: 15px;
+    font-size: 25px;
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items: center;
-    padding-left: 39.5%;
-}
-
-.navTitle h1{
     font-family: 'Roboto', sans-serif;
-    font-weight: normal;
+    font-weight: bold;
 }
 
-.navIndietro{
-    height: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: right;
-    align-items: center;
-    padding-right: 30px;
+.spanHome{
+    margin: 0px;
+    padding: 15px;
+    font-size: 20px;
 }
 
 a .spanHome{
@@ -80,7 +70,7 @@ a .spanHome:hover{
     text-decoration: none;
 }
 
-.navIndietro a {
+.boxNavBar a {
     text-decoration: none;
     color: var(--white);
     font-family: 'Roboto', sans-serif;
@@ -555,4 +545,33 @@ a {
         margin: 5px;
     }
 
+}
+
+@media only screen and (max-width:500px) {
+
+    .boxNavBar{
+        display: flex;
+        position: relative;
+        top: 0;
+        height: auto;
+        width: 100%;
+        background-color:darkorange;
+        justify-content: left;
+        align-items: center;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-weight: thin;
+    }
+    
+    #titleNavBar{
+        margin: 0px;
+        padding: 15px;
+        font-size: 20px;
+        width: 100%;
+        font-family: 'Roboto', sans-serif;
+        font-weight: normal;
+    }
+
+
+    
 }

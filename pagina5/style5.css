@@ -30,50 +30,47 @@ body{
 
 .boxNavBar{
     display: flex;
+    position: relative;
+    top: 0;
     height: auto;
     width: 100%;
     background-color:darkorange;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     color: white;
-    padding: 10px;
-}
-
-.navTitle{
-    height: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items: center;
-    padding-left: 42%;
-}
-
-.navTitle h1{
     font-family: 'Roboto', sans-serif;
-    font-weight: normal;
+    font-weight: thin;
 }
 
-.navIndietro{
-    height: auto;
+#titleNavBar{
+    margin: 0px;
+    padding: 15px;
+    font-size: 25px;
     width: 100%;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: right;
-    align-items: center;
-    padding-right: 30px;
-}
-
-.navIndietro a {
-    text-decoration: none;
-    color: var(--white);
     font-family: 'Roboto', sans-serif;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 .spanHome{
-    font-size: 1rem;
+    margin: 0px;
+    padding: 15px;
+    font-size: 0.7em;
+}
+
+a .spanHome{
     text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    color: var(--white);
+}
+
+a .spanHome:hover{
+    text-decoration: none;
+}
+
+.boxNavBar a {
+    text-decoration: none;
+    color: var(--white);
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
 }
@@ -102,4 +99,33 @@ body{
 
 span {
     color: white;
+}
+
+@media only screen and (max-width:500px) {
+
+    .boxNavBar{
+        display: flex;
+        position: relative;
+        top: 0;
+        height: auto;
+        width: 100%;
+        background-color:darkorange;
+        justify-content: left;
+        align-items: center;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-weight: thin;
+    }
+    
+    #titleNavBar{
+        margin: 0px;
+        padding: 15px;
+        font-size: 20px;
+        width: 100%;
+        font-family: 'Roboto', sans-serif;
+        font-weight: normal;
+    }
+
+
+    
 }
