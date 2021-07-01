@@ -77,18 +77,19 @@ function validateCreditCard(inputText, inputText2, inputText3){
     }
 }
 
-let radioCreditCard = document.getElementById('radioCredito');
-let radioPaypal = document.getElementById('radioPaypal');
+//let radioCreditCard = document.getElementById('radioCredito');
+//let radioPaypal = document.getElementById('radioPaypal');
 
-radioCreditCard.onchange = () =>{
+/*radioCreditCard.onchange = () =>{
     document.getElementById('paypalID').style.display="none"
     document.getElementById('creditCardID').style.display="flex"
-}
-
+}*/
+/*
 radioPaypal.onchange = () =>{
     document.getElementById('creditCardID').style.display="none"
     document.getElementById('paypalID').style.display="flex"
 }
+*/
  
 let dataRitorno = leggiCookie('dataRitorno');
 let container = document.getElementById('container');
