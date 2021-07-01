@@ -169,6 +169,91 @@ a {
     margin-top: 1px;
 }
 
+#errorDataR{
+    display: none;
+    color: red;
+}
+
+#errorDataR.active{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+}
+
+#errorDataAnno{
+    display: none;
+    color: red;
+}
+
+#errorDataAnno.active{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+}
+
+#errorDataMese{
+    display: none;
+    color: red;
+}
+
+#errorDataMese.active{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+}
+
+#errorDataGiorno{
+    display: none;
+    color: red;
+}
+
+#errorDataGiorno.active{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+}
+
+#errorOrario{
+    display: none;
+    color: red;
+}
+
+#errorOrario.active{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+}
+
+#errorOrarioR{
+    display: none;
+    color: red;
+}
+
+#errorOrarioR.active{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+}
+
+
 /* Passeggeri */
 
 .backBoxPasseggeri{

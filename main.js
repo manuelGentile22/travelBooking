@@ -418,8 +418,7 @@ function controllo(){
     let checkAnnoP = document.getElementById('annoP').value;
     let checkMeseP = document.getElementById('meseP').value;
     let checkGiornoP = document.getElementById('giornoP').value;
-    let checkOraP = document.getElementById('oraP').value;
-        if(checkAnnoP != 'Anno' && checkMeseP != 'Mese' && checkGiornoP != 'Giorno' && checkOraP != 'HH'){
+        if(checkAnnoP != 'Anno' && checkMeseP != 'Mese' && checkGiornoP != 'Giorno'){
             erroreDataPartenza = false;  
         } else{
             erroreDataPartenza = true;
@@ -430,10 +429,9 @@ function controllo(){
     let checkAnnoR = document.getElementById('annoR').value;
     let checkMeseR = document.getElementById('meseR').value;
     let checkGiornoR = document.getElementById('giornoR').value;
-    let checkOraR = document.getElementById('oraR').value;
     let checkbox = document.getElementById('checkSoloandata');
         if(!checkbox.checked){
-            if(checkAnnoR != 'Anno' && checkMeseR != 'Mese' && checkGiornoR != 'Giorno' && checkOraR != 'HH'){
+            if(checkAnnoR != 'Anno' && checkMeseR != 'Mese' && checkGiornoR != 'Giorno'){
                 erroreDataRitorno = false;
             } else{
                 erroreDataRitorno = true;
@@ -486,6 +484,26 @@ function controllo(){
             errorDataPartenzaInvalida = true;
         }
 
+    //controllo orario andata
+    let erroreOrarioPartenza = false;
+    let checkOraP = document.getElementById('oraP').value;
+        if(checkOraP != 'HH'){
+            erroreOrarioPartenza = false;  
+        } else{
+            erroreOrarioPartenza = true;
+        }
+
+    //controllo orario ritorno
+    let erroreOrarioRitorno = false;
+    let checkOraR = document.getElementById('oraR').value;
+        if(!checkbox.checked){
+            if(checkOraR != 'HH'){
+                erroreOrarioRitorno = false;
+            } else{
+                erroreOrarioRitorno = true;
+            }
+        }
+
     //attivazione errori nel form
 
     if(errorCittà == true){
@@ -494,14 +512,52 @@ function controllo(){
         InactiveError()
     }
 
-    if(erroreDataPartenza == true || erroreDataRitorno == true || errorAnnoIncorretto == true || errorMeseIncorretto == true || errorGiornoIncorretto == true || errorDataPartenzaInvalida == true){
+    if(erroreDataPartenza == true || errorDataPartenzaInvalida == true){
         activeErrorData();
     }else {
         InactiveErrorData();
     }
 
+    if(erroreDataRitorno == true){
+        activeErrorDataR();
+    }else{
+        InactiveErrorDataR();
+    }
+    // confronto data andata e ritorno
+    if(errorAnnoIncorretto == true){
+        activeErrorDataAnno();
+    }else{
+        InactiveErrorDataAnno();
+    }
+
+    if(errorMeseIncorretto == true){
+        activeErrorDataMese()
+    }else{
+        InactiveErrorDataMese()
+    }
+
+    if(errorGiornoIncorretto == true){
+        activeErrorDataGiorno()
+    }else{
+        InactiveErrorDataGiorno()
+    }
+
+    //orario partenza mancante
+    if(erroreOrarioPartenza == true){
+        activeErrorOraA();
+    }else{
+        InactiveErrorOraA();
+    }
+
+    //orario ritorno mancante
+    if(erroreOrarioRitorno == true){
+        activeErrorOraR();
+    }else{
+        InactiveErrorOraR();
+    }
+
     //controllo errori finale
-    if(errorCittà == false && erroreDataPartenza == false && erroreDataRitorno == false && errorAnnoIncorretto == false && errorMeseIncorretto == false && errorGiornoIncorretto == false && errorDataPartenzaInvalida == false){
+    if(errorCittà == false && erroreDataPartenza == false && erroreDataRitorno == false && errorAnnoIncorretto == false && errorMeseIncorretto == false && errorGiornoIncorretto == false && errorDataPartenzaInvalida == false && erroreOrarioPartenza == false && erroreOrarioRitorno == false){
         generalError = true;
     } else{
         generalError = false;
@@ -524,7 +580,7 @@ function InactiveError(){
     spanCittà.classList.remove("active");
 }
 
-//funzioni di errore ( data )
+//funzioni di errore ( data andata )
 
 function activeErrorData(){
     let spanData = document.getElementById('errorData');
@@ -537,3 +593,89 @@ function InactiveErrorData(){
     let spanData = document.getElementById('errorData');
     spanData.classList.remove("active");
 }
+
+//funzioni di errore ( data ritorno )
+
+function activeErrorDataR(){
+    let spanData = document.getElementById('errorDataR');
+    if(!spanData.classList.contains('active')){
+        spanData.classList.add('active');
+    }
+}
+
+function InactiveErrorDataR(){
+    let spanData = document.getElementById('errorDataR');
+    spanData.classList.remove("active");
+}
+
+//funzioni di errore ( anno )
+
+function activeErrorDataAnno(){
+    let spanData = document.getElementById('errorDataAnno');
+    if(!spanData.classList.contains('active')){
+        spanData.classList.add('active');
+    }
+}
+
+function InactiveErrorDataAnno(){
+    let spanData = document.getElementById('errorDataAnno');
+    spanData.classList.remove("active");
+}
+
+//funzioni di errore ( data mese )
+
+function activeErrorDataMese(){
+    let spanData = document.getElementById('errorDataMese');
+    if(!spanData.classList.contains('active')){
+        spanData.classList.add('active');
+    }
+}
+
+function InactiveErrorDataMese(){
+    let spanData = document.getElementById('errorDataMese');
+    spanData.classList.remove("active");
+}
+
+//funzioni di errore ( data giorno )
+
+function activeErrorDataGiorno(){
+    let spanData = document.getElementById('errorDataGiorno');
+    if(!spanData.classList.contains('active')){
+        spanData.classList.add('active');
+    }
+}
+
+function InactiveErrorDataGiorno(){
+    let spanData = document.getElementById('errorDataGiorno');
+    spanData.classList.remove("active");
+}
+
+//funzioni di errore ( ora andata )
+
+function activeErrorOraA(){
+    let spanData = document.getElementById('errorOrario');
+    if(!spanData.classList.contains('active')){
+        spanData.classList.add('active');
+    }
+}
+
+function InactiveErrorOraA(){
+    let spanData = document.getElementById('errorOrario');
+    spanData.classList.remove("active");
+}
+
+//funzioni di errore ( ora ritorno )
+
+function activeErrorOraR(){
+    let spanData = document.getElementById('errorOrarioR');
+    if(!spanData.classList.contains('active')){
+        spanData.classList.add('active');
+    }
+}
+
+function InactiveErrorOraR(){
+    let spanData = document.getElementById('errorOrarioR');
+    spanData.classList.remove("active");
+}
+
+
