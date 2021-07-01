@@ -340,7 +340,9 @@ label{
         font-weight: normal;
     }
 
-
+    .metodoTitle{
+        font-size: 0.7rem;
+    }
     
 }
 
