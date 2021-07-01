@@ -732,6 +732,38 @@ label{
         font-weight: normal;
     }
 
+    #boxInfoTariffe{
+        position: absolute;
+        z-index: 1;
+        left: -200px;
+        height: auto;
+        width: auto;
+        border: 5px solid;
+        border-color:var(--orange);
+        background-color: var(--lightblue);
+        color: var(--white);
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #boxInfoTariffeR{
+        position: absolute;
+        z-index: 1;
+        left: -200px;
+        height: auto;
+        width: auto;
+        border: 5px solid;
+        border-color:var(--orange);
+        background-color: var(--lightblue);
+        color: var(--white);
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
     #boxInfoTariffe div{
         width: 150px;
         height: auto;
