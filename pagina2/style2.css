@@ -735,7 +735,11 @@ label{
     #boxInfoTariffe{
         position: absolute;
         z-index: 1;
+<<<<<<< HEAD
         left: -120px;
+=======
+        left: -125px;
+>>>>>>> 38b4eb1f9906502dbbd66a5e26bf41f8a50fbe75
         height: auto;
         width: auto;
         border: 5px solid;
@@ -751,7 +755,11 @@ label{
     #boxInfoTariffeR{
         position: absolute;
         z-index: 1;
+<<<<<<< HEAD
         left: -120px;
+=======
+        left: -125px;
+>>>>>>> 38b4eb1f9906502dbbd66a5e26bf41f8a50fbe75
         height: auto;
         width: auto;
         border: 5px solid;
