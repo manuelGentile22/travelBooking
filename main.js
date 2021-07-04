@@ -18,7 +18,6 @@ function loadPagina(){
     $('.destinazioneList').remove();
     caricaListaPartenze('citiesP', tratteJson.partenza);
     checkboxRitornoL();
-    document.getElementById('giornoP').innerText
     cencellaCookie('partenza');
     cencellaCookie('destinazione');
     cencellaCookie('dataAndata');
@@ -69,153 +68,6 @@ function caricaListaDestinazione(select, cittàP){
     }
 };
 
-//caricamento scelta data
-
-let giornoP = document.getElementById('giornoP');
-
-giornoP.onfocus = function(){
-    $('.giornoPartenza').remove();
-    let year = document.getElementById('annoP').value;
-    let month = document.getElementById('meseP').value;
-    if(year != 'Anno' && month != 'Mese'){
-        if(month == '3' || month == '5' || month == '8' || month == '10'){
-            let i = 1;
-            let max = 31
-            for(i; i<max;i++){
-                let data = new Date(year, month, i);
-                data = data.toLocaleString('it-EU', {
-                    weekday: 'long',
-                    day: 'numeric'
-                  });
-                let option = document.createElement("option");
-                option.text = data;
-                option.value = i;
-                option.className='giornoPartenza';
-                giornoP.appendChild(option);
-            }
-        } else if (month == '1'){
-            if(year != '2024'){
-                let i = 1;
-                let max = 29
-                for(i; i<max;i++){
-                    let data = new Date(year, month, i);
-                    data = data.toLocaleString('it-EU', {
-                        weekday: 'long',
-                        day: 'numeric'
-                    });
-                    let option = document.createElement("option");
-                    option.text = data;
-                    option.value = i;
-                    option.className='giornoPartenza';
-                    giornoP.appendChild(option);
-                }
-            }else{
-                let i = 1;
-                let max = 30
-                for(i; i<max;i++){
-                    let data = new Date(year, month, i);
-                    data = data.toLocaleString('it-EU', {
-                        weekday: 'long',
-                        day: 'numeric'
-                    });
-                    let option = document.createElement("option");
-                    option.text = data;
-                    option.value = i;
-                    option.className='giornoPartenza';
-                    giornoP.appendChild(option);
-                }
-            }
-        } else {
-            let i = 1;
-            let max = 32
-            for(i; i<max;i++){
-                let data = new Date(year, month, i);
-                data = data.toLocaleString('it-EU', {
-                    weekday: 'long',
-                    day: 'numeric'
-                });
-                let option = document.createElement("option");
-                option.text = data;
-                option.value = i;
-                option.className='giornoPartenza';
-                giornoP.appendChild(option);
-            }
-        }
-    }
-}
-
-let giornoR = document.getElementById('giornoR');
-
-giornoR.onfocus = function(){
-    $('.giornoRitorno').remove();
-    let year = document.getElementById('annoR').value;
-    let month = document.getElementById('meseR').value;
-    if(year != 'Anno' && month != 'Mese'){
-        if(month == '3' || month == '5' || month == '8' || month == '10'){
-            let i = 1;
-            let max = 31
-            for(i; i<max;i++){
-                let data = new Date(year, month, i);
-                data = data.toLocaleString('it-EU', {
-                    weekday: 'long',
-                    day: 'numeric'
-                });
-                let option = document.createElement("option");
-                option.text = data;
-                option.value = i;
-                option.className='giornoRitorno';
-                giornoR.appendChild(option);
-            }
-        } else if (month == '1'){
-            if(year != '2024'){
-                let i = 1;
-                let max = 29
-                for(i; i<max;i++){
-                    let data = new Date(year, month, i);
-                    data = data.toLocaleString('it-EU', {
-                        weekday: 'long',
-                        day: 'numeric'
-                    });
-                    let option = document.createElement("option");
-                    option.text = data;
-                    option.value = i;
-                    option.className='giornoRitorno';
-                giornoR.appendChild(option);
-                }
-            }else{
-                let i = 1;
-                let max = 30
-                for(i; i<max;i++){
-                    let data = new Date(year, month, i);
-                    data = data.toLocaleString('it-EU', {
-                        weekday: 'long',
-                        day: 'numeric'
-                    });
-                    let option = document.createElement("option");
-                    option.text = data;
-                    option.value = i;
-                    option.className='giornoRitorno';
-                    giornoR.appendChild(option);
-                }
-            }
-        } else {
-            let i = 1;
-            let max = 32
-            for(i; i<max;i++){
-                let data = new Date(year, month, i);
-                data = data.toLocaleString('it-EU', {
-                    weekday: 'long',
-                    day: 'numeric'
-                });
-                let option = document.createElement("option");
-                option.text = data;
-                option.value = i;
-                option.className='giornoRitorno';
-                giornoR.appendChild(option);
-            }
-        }
-    }
-}
 
 // Checkbox ritorno
 
@@ -226,8 +78,6 @@ checkbox.addEventListener('change', () => {
   if(checkbox.checked) {
     boxRitorno.style.visibility = 'hidden';
     boxRitorno.style.display = 'none';
-    document.getElementById('annoR').value = 'Anno';
-    document.getElementById('meseR').value = 'Mese';
     $('.giornoRitorno').remove();
     document.getElementById('oraR').value = 'HH';
   } else {
@@ -251,25 +101,6 @@ function checkboxRitornoL(){
         boxRitorno2.style.display = 'flex';
       }
 }
-
-// Controllo change anno e mese
-
-let annoP = document.getElementById('annoP');
-annoP.onchange = function(){
-    $('.giornoPartenza').remove();
-};
-let annoR = document.getElementById('annoR');
-annoR.onchange = function(){
-    $('.giornoRitorno').remove();
-};
-let meseP = document.getElementById('meseP');
-meseP.onchange = function(){
-    $('.giornoPartenza').remove();
-};
-let meseR = document.getElementById('meseR');
-meseR.onchange = function(){
-    $('.giornoRitorno').remove();
-};
 
 //Bottone
 let objForm = {};
@@ -327,10 +158,16 @@ const parametriUtente = (partenza, destinazione, dataAndata, orarioAndata, dataR
 function createOggettoParametri(){
     let cittàDiPartenza = document.getElementById('citiesP').value;
     let cittàDiDestinazione = document.getElementById('citiesD').value;
-    let annoDiPartenza = document.getElementById('annoP').value;
-    let meseDiPartenza = document.getElementById('meseP').value;
-    let giornoDiPartenza = document.getElementById('giornoP').value;
-    let dataDiPartenza = [annoDiPartenza, meseDiPartenza, giornoDiPartenza];
+    let dataPartenzaPicker = document.getElementById('datePickerAndata').value;
+    dataPartenzaPicker = Date.parse(dataPartenzaPicker);
+    dataPartenzaPicker = new Date(dataPartenzaPicker)
+    dataPartenzaPicker = dataPartenzaPicker.toLocaleString('it-EU', {
+        weekday: 'long', 
+        day: 'numeric',
+        month: 'long', 
+        year: 'numeric'
+      });
+    let dataDiPartenza = dataPartenzaPicker;
     let orarioPartenza = document.getElementById('oraP').value;
     let dataDiRitorno;
     let orarioRitorno;
@@ -356,10 +193,16 @@ function createOggettoParametri(){
         orarioRitorno = false;
         prezzoRitorno = false;
     } else {
-        let annoDiRitorno = document.getElementById('annoR').value;
-        let meseDiRitorno = document.getElementById('meseR').value;
-        let giornoDiRitorno = document.getElementById('giornoR').value;
-        dataDiRitorno = [annoDiRitorno, meseDiRitorno, giornoDiRitorno];
+        let dataRitornoPicker = document.getElementById('datePickerRitorno').value;
+        dataRitornoPicker = Date.parse(dataRitornoPicker);
+        dataRitornoPicker = new Date(dataRitornoPicker)
+        dataRitornoPicker = dataRitornoPicker.toLocaleString('it-EU', {
+            weekday: 'long', 
+            day: 'numeric',
+            month: 'long', 
+            year: 'numeric'
+          });
+        dataDiRitorno = dataRitornoPicker;
         orarioRitorno = document.getElementById('oraR').value;
         for (i in tratteJson.partenza) {
             if(cittàDiDestinazione == tratteJson.partenza[i].città){
@@ -379,12 +222,13 @@ function createOggettoParametri(){
 }
 
 
-// controlli del form
+// CONTROLLI DEL FORM
 
 let generalError = false;
 function controllo(){
-    let errorCittà = false;
+
     //controllo città partenza
+    let errorCittà = false;
     let checkCittàP = document.getElementById('citiesP');
         for (i in tratteJson.partenza) {
             if(checkCittàP.value != tratteJson.partenza[i].città){
@@ -414,75 +258,54 @@ function controllo(){
         }
 
     //controllo data andata tutta compilata
-    let erroreDataPartenza = false;
-    let checkAnnoP = document.getElementById('annoP').value;
-    let checkMeseP = document.getElementById('meseP').value;
-    let checkGiornoP = document.getElementById('giornoP').value;
-        if(checkAnnoP != 'Anno' && checkMeseP != 'Mese' && checkGiornoP != 'Giorno'){
-            erroreDataPartenza = false;  
-        } else{
-            erroreDataPartenza = true;
-        }
-
+        let erroreDataPartenza = false;
+        let dataPartenzaPicker = document.getElementById('datePickerAndata').value;
+        dataPartenzaPicker = Date.parse(dataPartenzaPicker);
+        dataPartenzaPicker = new Date(dataPartenzaPicker)
+            if(isNaN(dataPartenzaPicker.getTime())){
+                erroreDataPartenza = true;  
+            } 
+    
     //controllo data ritorno tutta compilata
-    let erroreDataRitorno = false;
-    let checkAnnoR = document.getElementById('annoR').value;
-    let checkMeseR = document.getElementById('meseR').value;
-    let checkGiornoR = document.getElementById('giornoR').value;
-    let checkbox = document.getElementById('checkSoloandata');
-        if(!checkbox.checked){
-            if(checkAnnoR != 'Anno' && checkMeseR != 'Mese' && checkGiornoR != 'Giorno'){
-                erroreDataRitorno = false;
-            } else{
-                erroreDataRitorno = true;
+        let erroreDataRitorno = false;
+        let dataRitornoPicker = document.getElementById('datePickerRitorno').value;
+        dataRitornoPicker = Date.parse(dataRitornoPicker);
+        dataRitornoPicker = new Date(dataRitornoPicker)
+        let checkbox = document.getElementById('checkSoloandata');
+            if(!checkbox.checked){
+                if(isNaN(dataRitornoPicker.getTime())){
+                    erroreDataRitorno = true;  
+                } 
             }
-        }
-
-    //controllo data inserita correttamente
-    let errorAnnoIncorretto = false;
-    let errorMeseIncorretto = false;
-    let errorGiornoIncorretto = false;
-        if(!checkbox.checked){
-            checkAnnoP = parseInt(checkAnnoP);
-            checkAnnoR = parseInt(checkAnnoR);
-            if(checkAnnoP>checkAnnoR){
-                errorAnnoIncorretto = true;
-                console.log('Inserire anno corretto');
-            } else if(checkAnnoP == checkAnnoR){
-                checkMeseP = parseInt(checkMeseP);
-                checkMeseR = parseInt(checkMeseR);
-                if(checkMeseR >= checkMeseP){
-                    if(checkMeseR > checkMeseP){
-
-                    }else{
-                        checkGiornoP = parseInt(checkGiornoP);
-                        checkGiornoR = parseInt(checkGiornoR);
-                        if(checkGiornoR < checkGiornoP){
-                            errorGiornoIncorretto = true;
-                            console.log('Inserire giorno corretto');
-                        } else if (checkGiornoR == checkGiornoP) {
-                            //implementazione controllo orario
-                        }
-                    }
-                }else{
-                    errorMeseIncorretto = true;
-                    console.log('Inserire mese corretto');
-                }
-            }
-        }
+    
+    
     //controllo data partenza corretta
         let errorDataPartenzaInvalida = false;
-        let dataOggi = new Date();
-        let partenzaAnno = document.getElementById('annoP').value;
-        let partenzaMese = document.getElementById('meseP').value;
-        let partenzaGiorno = document.getElementById('giornoP').value;
-        let dataPartenza = new Date(partenzaAnno, partenzaMese, partenzaGiorno);
-        let valoreNP = dataPartenza.getTime();
-        let valoreNO = dataOggi.getTime();
-        let differenza = valoreNP - valoreNO;
-        if(differenza < 0 ){
-            errorDataPartenzaInvalida = true;
+        let checkStessoGiorno = false;
+        if(erroreDataPartenza == false){
+            let dataOggi = new Date();
+            let differenza = dataOggi - dataPartenzaPicker;
+            if(differenza > 0 ){
+                if(dataOggi.getDate() == dataPartenzaPicker.getDate() && dataOggi.getMonth() == dataPartenzaPicker.getMonth() && dataOggi.getFullYear() == dataPartenzaPicker.getFullYear()){
+                    errorDataPartenzaInvalida = false;
+                    checkStessoGiorno = true;
+                }else{
+                    errorDataPartenzaInvalida = true;
+                }
+            }
+        }  
+
+    //controllo data ritorno corretta
+    let errorDataRitornoInvalida = false;
+    if(errorDataPartenzaInvalida == false){
+        let differenza = dataPartenzaPicker - dataRitornoPicker;
+        if(differenza >= 0 ){
+            errorDataRitornoInvalida = true;
+        }else{
+            errorDataRitornoInvalida = false;
         }
+        
+    } 
 
     //controllo orario andata
     let erroreOrarioPartenza = false;
@@ -504,6 +327,19 @@ function controllo(){
             }
         }
     
+    //controllo orario andata
+    let erroreOrarioPartenzaValido = false;
+    if(checkStessoGiorno == true){
+        let dataOggi = new Date();
+        let orarioNow = dataOggi.getHours();
+        let differenza = orarioNow - checkOraP
+        if(differenza >= 0){
+            erroreOrarioPartenzaValido = true;
+        }else{
+            erroreOrarioPartenzaValido = false;
+        }
+    }
+
     //controllo passeggeri
     let errorePasseggeri = false;
     let checkAdultiN = document.getElementById('adulti');
@@ -520,11 +356,6 @@ function controllo(){
         }
 
     //attivazione errori nel form
-    if(errorePasseggeri == true){
-        activeErrorPasseggeri()
-    }else{
-        InactiveErrorPasseggeri()
-    }
 
     if(errorCittà == true){
         activeError()
@@ -532,34 +363,31 @@ function controllo(){
         InactiveError()
     }
 
-    if(erroreDataPartenza == true || errorDataPartenzaInvalida == true){
+    //data partenza mancante
+    if(erroreDataPartenza == true){
         activeErrorData();
     }else {
         InactiveErrorData();
     }
-
+    //data ritorno mancante
     if(erroreDataRitorno == true){
         activeErrorDataR();
     }else{
         InactiveErrorDataR();
     }
-    // confronto data andata e ritorno
-    if(errorAnnoIncorretto == true){
-        activeErrorDataAnno();
+
+    //data partenza invalida
+    if(errorDataPartenzaInvalida == true){
+        activeErrorDataPartenzaNonValida();
     }else{
-        InactiveErrorDataAnno();
+        InactiveErrorDataPartenzaNonValida();
     }
 
-    if(errorMeseIncorretto == true){
-        activeErrorDataMese()
+    //data ritorno invalida
+    if(errorDataRitornoInvalida ==true){
+        activeErrorDataRitornoNonValida();
     }else{
-        InactiveErrorDataMese()
-    }
-
-    if(errorGiornoIncorretto == true){
-        activeErrorDataGiorno()
-    }else{
-        InactiveErrorDataGiorno()
+        InactiveErrorDataRitornoNonValida();
     }
 
     //orario partenza mancante
@@ -569,6 +397,13 @@ function controllo(){
         InactiveErrorOraA();
     }
 
+    //orario partenza invalido
+    if(erroreOrarioPartenzaValido == true){
+        activeErroreOrarioPartenzaInvalido();
+    }else{
+        InactiveErroreOrarioPartenzaInvalido();
+    }
+
     //orario ritorno mancante
     if(erroreOrarioRitorno == true){
         activeErrorOraR();
@@ -576,8 +411,15 @@ function controllo(){
         InactiveErrorOraR();
     }
 
+    //errore passeggeri
+    if(errorePasseggeri == true){
+        activeErrorPasseggeri()
+    }else{
+        InactiveErrorPasseggeri()
+    }
+
     //controllo errori finale
-    if(errorCittà == false && erroreDataPartenza == false && erroreDataRitorno == false && errorAnnoIncorretto == false && errorMeseIncorretto == false && errorGiornoIncorretto == false && errorDataPartenzaInvalida == false && erroreOrarioPartenza == false && erroreOrarioRitorno == false){
+    if(errorCittà == false && erroreDataPartenza == false && errorDataPartenzaInvalida == false && erroreDataRitorno == false && errorDataRitornoInvalida == false && erroreOrarioPartenza == false && erroreOrarioPartenzaValido == false && erroreOrarioRitorno == false && errorePasseggeri == false){
         generalError = true;
     } else{
         generalError = false;
@@ -628,45 +470,31 @@ function InactiveErrorDataR(){
     spanData.classList.remove("active");
 }
 
-//funzioni di errore ( anno )
+//funzioni di errore ( data partenza non valida )
 
-function activeErrorDataAnno(){
-    let spanData = document.getElementById('errorDataAnno');
+function activeErrorDataPartenzaNonValida(){
+    let spanData = document.getElementById('errorDataValida');
     if(!spanData.classList.contains('active')){
         spanData.classList.add('active');
     }
 }
 
-function InactiveErrorDataAnno(){
-    let spanData = document.getElementById('errorDataAnno');
+function InactiveErrorDataPartenzaNonValida(){
+    let spanData = document.getElementById('errorDataValida');
     spanData.classList.remove("active");
 }
 
-//funzioni di errore ( data mese )
+//funzioni di errore ( data ritorno non valida )
 
-function activeErrorDataMese(){
-    let spanData = document.getElementById('errorDataMese');
+function activeErrorDataRitornoNonValida(){
+    let spanData = document.getElementById('errorDataRValida');
     if(!spanData.classList.contains('active')){
         spanData.classList.add('active');
     }
 }
 
-function InactiveErrorDataMese(){
-    let spanData = document.getElementById('errorDataMese');
-    spanData.classList.remove("active");
-}
-
-//funzioni di errore ( data giorno )
-
-function activeErrorDataGiorno(){
-    let spanData = document.getElementById('errorDataGiorno');
-    if(!spanData.classList.contains('active')){
-        spanData.classList.add('active');
-    }
-}
-
-function InactiveErrorDataGiorno(){
-    let spanData = document.getElementById('errorDataGiorno');
+function InactiveErrorDataRitornoNonValida(){
+    let spanData = document.getElementById('errorDataRValida');
     spanData.classList.remove("active");
 }
 
@@ -684,6 +512,19 @@ function InactiveErrorOraA(){
     spanData.classList.remove("active");
 }
 
+//funzioni di errore ( ora andata invalida)
+
+function activeErroreOrarioPartenzaInvalido(){
+    let spanData = document.getElementById('errorOrarioValido');
+    if(!spanData.classList.contains('active')){
+        spanData.classList.add('active');
+    }
+}
+
+function InactiveErroreOrarioPartenzaInvalido(){
+    let spanData = document.getElementById('errorOrarioValido');
+    spanData.classList.remove("active");
+}
 //funzioni di errore ( ora ritorno )
 
 function activeErrorOraR(){

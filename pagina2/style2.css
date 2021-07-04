@@ -11,6 +11,7 @@
     --lightblue: lightskyblue;
     --orange: darkorange; 
     --blue: rgb(43, 196, 223);
+    --darkblue: #0b111f;
 }
 
 p, label, span{
@@ -35,7 +36,7 @@ body{
     top: 0;
     height: auto;
     width: 100%;
-    background-color:darkorange;
+    background-color:var(--darkblue);
     justify-content: center;
     align-items: center;
     color: white;
@@ -94,8 +95,8 @@ a .spanHome:hover{
     width: 30%;
     height: auto;
     background-color:rgb(252, 249, 240);
-    border: 15px solid;
-    border-color: rgb(43, 196, 223);
+    border: 3px solid;
+    border-color: var(--darkblue);
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 15px;
@@ -110,8 +111,8 @@ a .spanHome:hover{
         width: 50%;
         height: auto;
         background-color:rgb(252, 249, 240);
-        border: 15px solid;
-        border-color: rgb(43, 196, 223);
+        border: 3px solid;
+        border-color: var(--darkblue);
         margin-top: 30px;
         margin-bottom: 30px;
         padding: 15px;
@@ -127,8 +128,8 @@ a .spanHome:hover{
         width: 70%;
         height: auto;
         background-color:rgb(252, 249, 240);
-        border: 15px solid;
-        border-color: var(--blue);
+        border: 3px solid;
+        border-color: var(--darkblue);
         margin-top: 20px;
         margin-bottom: 20px;
         padding: 15px;
@@ -143,12 +144,11 @@ a .spanHome:hover{
     flex-direction: column;
     width: 85%;
     height: auto;
-    border: 5px solid;
-    border-color:var(--orange);
-    background-color: var(--lightblue);
-    color: var(--white);
+    color: black;
     margin-top: 35px;
     box-sizing: border-box;
+    border: 5px;
+    border: solid var(--blue);
 }
 
 .contenitoreOpzioniRitorno{
@@ -157,12 +157,11 @@ a .spanHome:hover{
     flex-direction: column;
     width: 85%;
     height: auto;
-    border: 5px solid;
-    border-color: var(--orange);
-    color: var(--white);
+    color: black;
     margin-top: 35px;
     box-sizing: border-box;
-    background-color: var(--lightblue);
+    border: 5px;
+    border: solid var(--blue);
 }
 
 
@@ -175,8 +174,8 @@ a .spanHome:hover{
         width: 85%;
         height: auto;
         background-color:rgb(252, 249, 240);
-        border: 15px solid;
-        border-color: rgb(43, 196, 223);
+        border: 3px solid;
+        border-color: var(--darkblue);
         margin-top: 20px;
         margin-bottom: 20px;
         padding: 10px;
@@ -189,10 +188,9 @@ a .spanHome:hover{
         flex-direction: column;
         width: 85%;
         height: auto;
-        border: 5px solid;
-        border-color:var(--orange);
-        background-color: var(--lightblue);
-        color: var(--white);
+        border: 3px solid;
+        border-color:var(--lightblue);
+        color: black;
         margin-top: 35px;
         box-sizing: border-box;
     }
@@ -203,12 +201,11 @@ a .spanHome:hover{
         flex-direction: column;
         width: 85%;
         height: auto;
-        border: 5px solid;
-        border-color: var(--orange);
-        color: var(--white);
+        border: 3px solid;
+        border-color: var(--lightblue);
+        color: black;
         margin-top: 35px;
         box-sizing: border-box;
-        background-color: var(--lightblue);
     }
 }
 
@@ -220,7 +217,7 @@ a .spanHome:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: darkorange;
+    background-color: var(--blue);
     color: var(--white);
     font-size: 1.2rem;
 }
@@ -296,7 +293,6 @@ a .spanHome:hover{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid black;
 }
 
 .contenitoreCittàPDR{
@@ -306,7 +302,6 @@ a .spanHome:hover{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid black;
 }
 
 .contenitoreCittàPartenza{
@@ -387,7 +382,6 @@ a .spanHome:hover{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid black;
 }
 
 .contenitoreAdulto{
@@ -429,7 +423,6 @@ a .spanHome:hover{
     height: auto;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid black;
 }
 
 .contenitoreButtonScelta{
@@ -439,7 +432,6 @@ a .spanHome:hover{
     height: auto;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid black;
 }
 
 .contenitoreButtonSceltaR{
@@ -449,7 +441,6 @@ a .spanHome:hover{
     height: auto;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid black;
 }
 
 .buttonCheck{
@@ -459,7 +450,6 @@ a .spanHome:hover{
     width: 30%;
     height: 20px;
     background-color: var(--blue);
-    border: 3px solid var(--orange);
     color: white;
     font-size: 0.6rem;
     margin: 5px;
@@ -474,7 +464,6 @@ a .spanHome:hover{
     width: 30%;
     height: 20px;
     background-color: var(--blue);
-    border: 3px solid var(--orange);
     color: white;
     font-size: 0.6rem;
     margin: 5px;
@@ -497,7 +486,6 @@ a .spanHome:hover{
     width: 30%;
     height: 20px;
     background-color: var(--blue);
-    border: 3px solid var(--orange);
     color: white;
     font-size: 0.6rem;
     margin: 5px;
@@ -512,7 +500,6 @@ a .spanHome:hover{
     width: 30%;
     height: 20px;
     background-color: var(--blue);
-    border: 3px solid var(--orange);
     color: white;
     font-size: 0.6rem;
     margin: 5px;
@@ -535,7 +522,6 @@ a .spanHome:hover{
     width: 10%;
     height: 20px;
     background-color: var(--blue);
-    border: 3px solid var(--orange);
     color: white;
     font-size: 0.6rem;
     margin: 5px 0px 30px 0px;
@@ -574,10 +560,9 @@ a .spanHome:hover{
     align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    border: 5px solid;
-    border-color:var(--orange);
-    background-color: var(--lightblue);
-    color: var(--white);
+    border: 3px solid;
+    border-color: var(--blue);
+    color: black;
 }
 
 label{
@@ -620,61 +605,44 @@ label{
 
 .infoTariffe{
     position: relative;
-}
-
-.infoTariffe p{
     display: flex;
-    font-size: 0.7rem;
-    justify-content: center;
-    align-items: center;
-}
-
-.infoTariffeR p{
-    display: flex;
-    font-size: 0.7rem;
-    justify-content: center;
-    align-items: center;
-}
-
-#boxInfoTariffe{
-    position: absolute;
-    z-index: 1;
-    left: -190px;
-    height: auto;
-    width: auto;
-    border: 5px solid;
-    border-color:var(--orange);
-    background-color: var(--lightblue);
-    color: var(--white);
-    display: none;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
 }
-
-#boxInfoTariffeR{
-    position: absolute;
-    z-index: 1;
-    left: -190px;
-    height: auto;
-    width: auto;
-    border: 5px solid;
-    border-color:var(--orange);
-    background-color: var(--lightblue);
-    color: var(--white);
-    display: none;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-#boxInfoTariffe div{
-    width: 200px;
-    height: auto;
+.infoTariffeR{
+    position: relative;
     display: flex;
-    flex-flow: row wrap;
-    overflow: scroll;
+    flex-direction: row;
+    width: 100%;
+}
+#boxInfoTariffeStandard{
+    height: auto;
+    width: 100%;
+    color: black;
     padding: 10px;
+}
+
+#boxInfoTariffePlus{
+    height: auto;
+    width: 100%;
+    color: black;
+    padding: 10px;
+}
+
+#boxInfoTariffeStandardR{
+    position: absolute;
+    z-index: 1;
+    left: -190px;
+    height: auto;
+    width: auto;
+    border: 5px solid;
+    border-color:var(--orange);
+    background-color: var(--lightblue);
+    color: var(--white);
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 #boxInfoTariffeR div{
@@ -687,7 +655,8 @@ label{
 }
 
 .elenco{
-    font-size: 15px;
+    font-size: 0.4em;
+    list-style-type: none;
 }
 
 #scelteContainerBagaglioR{
@@ -701,10 +670,9 @@ label{
     align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    border: 5px solid;
-    border-color:var(--orange);
-    background-color: var(--lightblue);
-    color: var(--white);
+    border: 3px solid;
+    border-color: var(--blue);
+    color: black;
 }
 
 @media only screen and (max-width:500px) {
@@ -715,7 +683,7 @@ label{
         top: 0;
         height: auto;
         width: 100%;
-        background-color:darkorange;
+        background-color:var(--darkblue);
         justify-content: left;
         align-items: center;
         color: white;
@@ -780,6 +748,34 @@ label{
         flex-flow: row wrap;
         overflow: scroll;
         padding: 10px;
+    }
+
+    .bottoneAvanti{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10%;
+        height: 20px;
+        background-color: var(--blue);
+        color: white;
+        font-size: 0.6rem;
+        margin: 5px 0px 30px 0px;
+        padding: 5px 0px 5px 0px;
+        cursor: pointer;
+    }
+    
+    .bottoneAvanti{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        height: 20px;
+        background-color: var(--blue);
+        color: white;
+        font-size: 0.6rem;
+        margin: 5px 0px 30px 0px;
+        padding: 5px 0px 5px 0px;
+        cursor: pointer;
     }
 
 

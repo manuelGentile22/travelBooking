@@ -16,6 +16,7 @@ p, label, span{
     --lightblue: lightskyblue;
     --orange: darkorange; 
     --blue: rgb(43, 196, 223);
+    --darkblue: #0b111f;
     }
 
 /* Background */
@@ -34,7 +35,7 @@ body{
     top: 0;
     height: auto;
     width: 100%;
-    background-color:darkorange;
+    background-color:var(--darkblue);
     justify-content: center;
     align-items: center;
     color: white;
@@ -91,14 +92,14 @@ a .spanHome:hover{
     width: 50%;
     height: auto;
     margin: 50px;
-    background-color: var(--blue);
+    background-color:rgb(252, 249, 240);
     box-shadow: var(--ombra);
-    border: 3px solid var(--orange);
+    border: 3px solid var(--darkblue);
     padding: 20px;
 } 
 
 span {
-    color: white;
+    color: black;
 }
 
 @media only screen and (max-width:500px) {
@@ -109,7 +110,7 @@ span {
         top: 0;
         height: auto;
         width: 100%;
-        background-color:darkorange;
+        background-color:var(--darkblue);
         justify-content: left;
         align-items: center;
         color: white;

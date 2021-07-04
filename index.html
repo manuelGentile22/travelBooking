@@ -48,39 +48,8 @@
                     <div class="backSoloDataOra">
                         <div class="boxDataOraPartenza">
                             <div class="calendarioPartenza">
-                                <div class="giornoP">
-                                    <div class="custom-select">
-                                        <select name="anno" id="annoP">
-                                            <option value="Anno">Anno</option>
-                                            <option value="2021">2021</option>
-                                            <option value="2022">2022</option>
-                                        </select>
-                                        <span class="custom-arrow"></span>
-                                    </div>
-                                    <div class="custom-select">
-                                        <select name="mese" id="meseP">
-                                            <option value="Mese">Mese</option>
-                                            <option value="0">Gennaio</option>
-                                            <option value="1">Febbraio</option>
-                                            <option value="2">Marzo</option>
-                                            <option value="3">Aprile</option>
-                                            <option value="4">Maggio</option>
-                                            <option value="5">Giugno</option>
-                                            <option value="6">Luglio</option>
-                                            <option value="7">Agosto</option>
-                                            <option value="8">Settembre</option>
-                                            <option value="9">Ottobre</option>
-                                            <option value="10">Novembre</option>
-                                            <option value="11">Dicembre</option>
-                                        </select>
-                                        <span class="custom-arrow"></span>
-                                    </div>
-                                    <div class="custom-select">
-                                        <select name="giorno" id="giornoP" class>
-                                            <option value="Giorno">Giorno</option>
-                                        </select>
-                                        <span class="custom-arrow"></span>
-                                    </div>
+                                <div class="boxdatepickerAndata">
+                                    <input type="date" class="datePicker" id="datePickerAndata" >
                                 </div>
                                 <div class="orarioP">
                                     <div class="custom-select">
@@ -105,47 +74,18 @@
                                     </div>
                                 </div>
                             </div>
-                            <span id="errorData">Inserire la data di partenza corretta</span>
-                            <span id="errorOrario">Inserire l'orario d'andata corretto</span>
+                            <span id="errorData">Inserire una data di partenza</span>
+                            <span id="errorDataValida">Inserire una data di partenza VALIDA</span>
+                            <span id="errorOrario">Inserire un'orario di partenza</span>
+                            <span id="errorOrarioValido">Inserire un'orario di partenza VALIDO</span>
                         </div>
                         <div id="boxDataOraRitorno">
                             <div class="BoxTitleRitorno">
                                 <label class="labelTitleRitorno">Ritorno</label>
                             </div>
                             <div class="calendarioRitorno">
-                                <div class="giornoR">
-                                    <div class="custom-select">
-                                        <select name="anno" id="annoR">
-                                            <option value="Anno">Anno</option>
-                                            <option value="2021">2021</option>
-                                            <option value="2022">2022</option>
-                                        </select>
-                                        <span class="custom-arrow"></span>
-                                    </div>
-                                    <div class="custom-select">
-                                        <select name="mese" id="meseR">
-                                            <option value="Mese">Mese</option>
-                                            <option value="0">Gennaio</option>
-                                            <option value="1">Febbraio</option>
-                                            <option value="2">Marzo</option>
-                                            <option value="3">Aprile</option>
-                                            <option value="4">Maggio</option>
-                                            <option value="5">Giugno</option>
-                                            <option value="6">Luglio</option>
-                                            <option value="7">Agosto</option>
-                                            <option value="8">Settembre</option>
-                                            <option value="9">Ottobre</option>
-                                            <option value="10">Novembre</option>
-                                            <option value="11">Dicembre</option>
-                                        </select>
-                                        <span class="custom-arrow"></span>
-                                    </div>
-                                    <div class="custom-select">
-                                        <select name="giorno" id="giornoR">
-                                            <option value="Giorno">Giorno</option>
-                                        </select>
-                                        <span class="custom-arrow"></span>
-                                    </div>
+                                <div class="boxdatepickerRitorno">
+                                    <input type="date" class="datePicker" id="datePickerRitorno">
                                 </div>
                                 <div class="orarioR">
                                     <div class="custom-select">
@@ -170,11 +110,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <span id="errorDataR">Inserire la data di ritorno corretta</span>
-                            <span id="errorDataAnno">Inserire l'anno di ritorno corretto</span>
-                            <span id="errorDataMese">Inserire il mese di ritorno corretto</span>
-                            <span id="errorDataGiorno">Inserire il giorno di ritorno corretto</span>
-                            <span id="errorOrarioR">Inserire l'orario di ritorno corretto</span>
+                            <span id="errorDataR">Inserire una data di ritorno</span>
+                            <span id="errorDataRValida">Inserire una data di ritorno VALIDA</span>
+                            <span id="errorOrarioR">Inserire un orario di ritorno</span>
                         </div>
                     </div>
                 </div>

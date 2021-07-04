@@ -16,6 +16,7 @@ p, label, span{
     --lightblue: lightskyblue;
     --orange: darkorange; 
     --blue: rgb(43, 196, 223);
+    --darkblue: #0b111f;
     }
 
 /* Background */
@@ -34,7 +35,7 @@ body{
     top: 0;
     height: auto;
     width: 100%;
-    background-color:darkorange;
+    background-color:var(--darkblue);
     justify-content: center;
     align-items: center;
     color: white;
@@ -260,7 +261,7 @@ a .spanHome:hover{
         top: 0;
         height: auto;
         width: 100%;
-        background-color:darkorange;
+        background-color:var(--darkblue);
         justify-content: left;
         align-items: center;
         color: white;
@@ -515,7 +516,6 @@ a .spanHome:hover{
     width: 200px;
     height: auto;
     background-color: var(--blue);
-    border: 3px solid var(--orange);
     color: white;
     font-size: 0.7rem;
     margin: 10px;
@@ -541,4 +541,33 @@ a .spanHome:hover{
     margin: 5px;
     font-size: 0.8rem;
     color: red;
+}
+
+@media only screen and (max-width:550px) {
+
+    .boxRiepilogo{
+        position: relative;
+        width: 90%;
+        height: auto;
+        background-color:rgb(252, 249, 240);
+        border: 5px solid;
+        border-color: rgb(43, 196, 223);
+        margin: 20px 0px 0px 15px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #containerRiepilogo{
+        display: flex;
+        align-items: left;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+    }
+
+
+    
 }

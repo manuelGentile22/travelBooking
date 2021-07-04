@@ -11,6 +11,7 @@
     --lightblue: lightskyblue;
     --orange: darkorange; 
     --blue: rgb(43, 196, 223);
+    --darkblue: #0b111f;
     }
 
 p, label, span{
@@ -35,7 +36,7 @@ body{
     top: 0;
     height: auto;
     width: 100%;
-    background-color:darkorange;
+    background-color:var(--darkblue);
     justify-content: center;
     align-items: center;
     color: white;
@@ -98,14 +99,14 @@ a {
     flex-direction: column;
     min-width: 295px;
     width: auto;
-    background-color: var(--lightblue);
+    background-color: var(--darkblue);
     margin-top: 50px;
     margin-bottom: 10px;
     
 }
 
 .boxForm {
-    margin: 15px;
+    margin: 10px;
     display: flex;
     flex-direction: column;
     min-width: 280px;
@@ -159,6 +160,34 @@ a {
     margin-top: 1px;
 }
 
+#errorDataValida{
+    display: none;
+    color: red;
+}
+
+#errorDataValida.active{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+}
+
+#errorDataRValida{
+    display: none;
+    color: red;
+}
+
+#errorDataRValida.active{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+}
+
 #errorDataR{
     display: none;
     color: red;
@@ -173,54 +202,26 @@ a {
     margin-top: 1px;
 }
 
-#errorDataAnno{
-    display: none;
-    color: red;
-}
-
-#errorDataAnno.active{
-    display: flex;
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1px;
-}
-
-#errorDataMese{
-    display: none;
-    color: red;
-}
-
-#errorDataMese.active{
-    display: flex;
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1px;
-}
-
-#errorDataGiorno{
-    display: none;
-    color: red;
-}
-
-#errorDataGiorno.active{
-    display: flex;
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1px;
-}
-
 #errorOrario{
     display: none;
     color: red;
 }
 
 #errorOrario.active{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+}
+
+#errorOrarioValido{
+    display: none;
+    color: red;
+}
+
+#errorOrarioValido.active{
     display: flex;
     width: 100%;
     height: auto;
@@ -408,6 +409,32 @@ a {
     align-items: center;
 }
 
+.boxdatepickerAndata{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.boxdatepickerRitorno{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.datePicker{
+    font-size: 1.1em;
+    font-weight: thin;
+    width: 60%;
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    padding: 5px;
+}
+
 /* style alle select */
 
 #citiesP , #citiesD, #annoP, #annoR, #meseP, #meseR, #giornoP, #giornoR, #oraP, #oraR {
@@ -438,7 +465,7 @@ a {
     top: 0;
     right: 0;
     display: block;
-    background-color: darkorange;
+    background-color: var(--lightblue);
     height: 100%;
     width: 2.5rem;
     pointer-events: none;
@@ -462,7 +489,7 @@ a {
 .custom-arrow::before {
     border-left: var(--size) solid transparent;
     border-right: var(--size) solid transparent;
-    border-top: var(--size) solid rgba(255, 255, 255, 0.5);
+    border-top: var(--size) solid black;
 
     top:50%;
 }
@@ -479,7 +506,7 @@ a {
     pointer-events: none;
     color: white;
     padding: 1em;
-    background-color: darkorange;
+    background-color: var(--lightblue);
 }
 
 .custom-arrowP::before,
@@ -529,7 +556,6 @@ a {
     width: 140px;
     height: auto;
     background-color: var(--blue);
-    border: 3px solid var(--orange);
     color: white;
     text-decoration: none;
     font-size: 1.5rem;
@@ -569,6 +595,13 @@ a {
 
 }
 
+@media only screen and (max-width:1150px) {
+
+    .datePicker{
+        width: 200px;
+    }
+}
+
 @media only screen and (max-width:500px) {
 
     .boxNavBar{
@@ -577,7 +610,7 @@ a {
         top: 0;
         height: auto;
         width: 100%;
-        background-color:darkorange;
+        background-color:var(--darkblue);
         justify-content: left;
         align-items: center;
         color: white;

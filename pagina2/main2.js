@@ -39,12 +39,12 @@ let spanRitorno = document.getElementById('spanRitorno');
 let partenza = leggiCookie('partenza');
 let destinazione = leggiCookie('destinazione');
 let dataAndata = leggiCookie('dataAndata');
+dataAndata = dataAndata.split(' ')
 let orarioAndata = leggiCookie('orarioAndata');
 orarioAndata = parseInt(orarioAndata);
 let dataRitorno = leggiCookie('dataRitorno');
 let orarioRitorno = leggiCookie('orarioRitorno');
 let passeggeri = leggiCookie('passeggeri');
-dataAndata = dataAndata.split(',');
 let prezzoPA = leggiCookie('prezzoAndata');
 prezzoPA = prezzoPA.split(',');
 let prezzoPR = leggiCookie('prezzoRitorno');
@@ -57,7 +57,7 @@ if(dataRitorno=='false'){
 }else{
     spanAndata.className='sAndata';
     spanRitorno.className='sRitorno';
-    dataRitorno = dataRitorno.split(',');
+    dataRitorno = dataRitorno.split(' ');
     orarioRitorno = parseInt(orarioRitorno);
     nuovaPartenza = destinazione;
     nuovaDestinazione = partenza;
@@ -79,20 +79,11 @@ function caricaOpzioniAndataRitorno(){
         if(partenza == tratteJson.partenza[i].città){
             for (j in tratteJson.partenza[i].destinazione){
                 if(destinazione == tratteJson.partenza[i].destinazione[j].città){
-                    let yPartenza = dataAndata[0];
-                    let mPartenza = dataAndata[1];
-                    let dPartenza = dataAndata[2];
-                    let datePartenza = new Date(yPartenza, mPartenza, dPartenza);
-                    let dataPartenza = new Date(yPartenza, mPartenza, dPartenza);
-                    datePartenza = datePartenza.toLocaleString('it-EU', {
-                        weekday: 'long'
-                      });
-                    dataPartenza = dataPartenza.toLocaleString('it-EU', {
-                        weekday: 'long', 
-                        day: 'numeric',
-                        month: 'long', 
-                        year: 'numeric'
-                      });
+                    let yPartenza = dataAndata[3];
+                    let mPartenza = dataAndata[2];
+                    let dPartenza = dataAndata[1];
+                    let datePartenza = dataAndata[0];
+                    let dataPartenza = dPartenza+' / '+mPartenza+' / '+yPartenza
                     for(let x=0;x<tratteJson.partenza[i].destinazione[j].orario.length;x++){
                         for(let z=0; z<tratteJson.partenza[i].destinazione[j].orario[x].giorno.length;z++){
                             if(datePartenza == tratteJson.partenza[i].destinazione[j].orario[x].giorno[z]){
@@ -256,20 +247,11 @@ function caricaOpzioniAndataRitorno(){
             if(nuovaPartenza == tratteJson.partenza[i].città){
                 for (j in tratteJson.partenza[i].destinazione){
                     if(nuovaDestinazione == tratteJson.partenza[i].destinazione[j].città){
-                        let yRitorno = nuovaDataRitorno[0];
-                        let mRitorno = nuovaDataRitorno[1];
-                        let dRitorno = nuovaDataRitorno[2];
-                        let dateRitorno = new Date(yRitorno, mRitorno, dRitorno);
-                        let dataRitorno = new Date(yRitorno, mRitorno, dRitorno);
-                        dateRitorno = dateRitorno.toLocaleString('it-EU', {
-                            weekday: 'long'
-                          });
-                          dataRitorno = dataRitorno.toLocaleString('it-EU', {
-                            weekday: 'long', 
-                            day: 'numeric',
-                            month: 'long', 
-                            year: 'numeric'
-                          });
+                        let yRitorno = nuovaDataRitorno[3];
+                        let mRitorno = nuovaDataRitorno[2];
+                        let dRitorno = nuovaDataRitorno[1];
+                        let dateRitorno = nuovaDataRitorno[0];
+                        let dataRitorno = dRitorno+' / '+mRitorno+' / '+yRitorno
                         for(let x=0;x<tratteJson.partenza[i].destinazione[j].orario.length;x++){
                             for(let z=0; z<tratteJson.partenza[i].destinazione[j].orario[x].giorno.length;z++){
                                 if(dateRitorno == tratteJson.partenza[i].destinazione[j].orario[x].giorno[z]){
@@ -536,27 +518,6 @@ $('#scelteContainerRitorno').on('click', '.buttonAnnullaCheckR', function(){
         }
     }
 });
-
-let infoTariffe = document.getElementById('Tariffe');
-infoTariffe.addEventListener('mouseover', tariffeInfoOn);
-function tariffeInfoOn(){
-    document.getElementById('boxInfoTariffe').style.display="flex";
-}
-infoTariffe.addEventListener('mouseleave', tariffeInfoOff);
-function tariffeInfoOff(){
-    document.getElementById('boxInfoTariffe').style.display="none";
-}
-
-let infoTariffeR = document.getElementById('TariffeR');
-infoTariffeR.addEventListener('mouseover', tariffeRInfoOn);
-function tariffeRInfoOn(){
-    document.getElementById('boxInfoTariffeR').style.display="flex";
-}
-infoTariffeR.addEventListener('mouseleave', tariffeRInfoOff);
-function tariffeRInfoOff(){
-    document.getElementById('boxInfoTariffeR').style.display="none";
-}
-
 
 let error1 = true;
 let error2= true;

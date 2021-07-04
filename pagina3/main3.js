@@ -36,23 +36,18 @@ function leggiCookie(nomeCookie)
 let partenza = leggiCookie('partenza');
 let destinazione = leggiCookie('destinazione');
 let dataAndata = leggiCookie('dataAndata');
+dataAndata = dataAndata.split(' ')
 let orarioPartenza = leggiCookie('orarioPartenzaScelto');
 let passeggeri = leggiCookie('passeggeri');
 passeggeri = passeggeri.split(',');
 passeggeri[0] = parseInt(passeggeri[0]);
 passeggeri[1] = parseInt(passeggeri[1]);
 passeggeri[2] = parseInt(passeggeri[2]);
-dataAndata = dataAndata.split(',');
-let yPartenza = dataAndata[0];
-let mPartenza = dataAndata[1];
-let dPartenza = dataAndata[2];
-let dataPartenza = new Date(yPartenza, mPartenza, dPartenza);
-dataPartenza = dataPartenza.toLocaleString('it-EU', {
-  weekday: 'long', 
-  day: 'numeric',
-  month: 'long', 
-  year: 'numeric'
-});
+let yPartenza = dataAndata[3];
+let mPartenza = dataAndata[2];
+let nPartenza = dataAndata[1];
+let dPartenza = dataAndata[0];
+let dataPartenza = dPartenza+' '+nPartenza+' / '+mPartenza+' / '+yPartenza
 let tariffaPartenza = leggiCookie('tariffaPartenzaScelta');
 let prezzoPA = leggiCookie('prezzoAndata');
 prezzoPA = prezzoPA.split(',');
@@ -68,6 +63,7 @@ let dataRitorno = leggiCookie('dataRitorno');
 let orarioRitorno = false;
 let yRitorno 
 let mRitorno
+let nRitorno
 let dRitorno
 let dataPartenzaR
 let tariffaRitorno
@@ -81,18 +77,13 @@ if(dataRitorno=='false'){
   passeggeriRitorno[0] = parseInt(passeggeriRitorno[0]);
   passeggeriRitorno[1] = parseInt(passeggeriRitorno[1]);
   passeggeriRitorno[2] = parseInt(passeggeriRitorno[2]);
-  dataRitorno = dataRitorno.split(',');
+  dataRitorno = dataRitorno.split(' ');
   orarioRitorno = leggiCookie('orarioPartenzaSceltoR');
-  yRitorno = dataRitorno[0];
-  mRitorno = dataRitorno[1];
-  dRitorno = dataRitorno[2];
-  dataPartenzaR = new Date(yRitorno, mRitorno, dRitorno);
-  dataPartenzaR = dataPartenzaR.toLocaleString('it-EU', {
-    weekday: 'long', 
-    day: 'numeric',
-    month: 'long', 
-    year: 'numeric'
-  });
+  yRitorno = dataRitorno[3];
+  mRitorno = dataRitorno[2];
+  nRitorno = dataRitorno[1];
+  dRitorno = dataRitorno[0];
+  dataPartenzaR = dRitorno+' '+nRitorno+' / '+mRitorno+' / '+yRitorno
   tariffaRitorno = leggiCookie('tariffaRitornoScelta');
   prezzoPR = prezzoPR.split(',');
   prezzoPR[0] = parseInt(prezzoPR[0]);
@@ -353,7 +344,6 @@ function generaRiepilogo(){
     let mr,ar,nr;
     for(mr=0;mr<passeggeriRitorno[0];mr++){
       prezzoTotRitorno += prezzoPR[0];
-      console.log(prezzoTotRitorno)
     }
     for(ar=0;ar<passeggeriRitorno[1];ar++){
       prezzoTotRitorno += prezzoPR[1];
