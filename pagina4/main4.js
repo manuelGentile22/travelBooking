@@ -95,10 +95,10 @@ let dataRitorno = leggiCookie('dataRitorno');
 let container = document.getElementById('container');
 function totale(){
     let prezzoTotaleA = leggiCookie('prezzoTotAndata');
-    let totale = prezzoTotaleA;
+    let totale = parseInt(prezzoTotaleA);
     if(dataRitorno!='false'){
         let prezzoTotaleR = leggiCookie('prezzoTotRitorno');
-        totale += prezzoTotaleR;
+        totale += parseInt(prezzoTotaleR);
     }
     let boxPrezzoTot = document.createElement('div');
     boxPrezzoTot.className='contenitorePrezzoTot';
